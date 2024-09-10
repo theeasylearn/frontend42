@@ -1,9 +1,13 @@
-1) create web page for IPL points table using table tag. 
-2) create your resume using only html tag.
-https://images.template.net/wp-content/uploads/2018/11/Free-Basic-Resume-Template2.jpg
-3) create forgot password page. 
+1) create html page that has all indian language name as symbolic list.
 
+2) create html page that has numeric list of all nation's name which has played football world cup. 
 
-4) create a website gujartirecipes.com 
-    1 Home 
-    2 Categories 
+3) create html page that has two differnt div tag. each div should have 3 stories. each div should have differnt type of stories. for example inspiration stories. 2nd div tag spiritual stories. 
+
+4) create mans worlds cup 2023 point table using table tag in html. 
+
+5) create login page 
+
+6) create change password page. 
+
+7) create bus ticket page (reference gsrtc)

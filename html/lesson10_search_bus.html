@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search Bus</h1>
+    <form action="success.html" method="get">
+        <table align="center" width="80%" cellpadding="10" bgcolor="#eeeeee" border="2">
+            <tr>
+                <td>
+                    <input type="text" name="source" placeholder="Source" required />
+                </td>
+                <td>
+                    <input type="text" name="destination" placeholder="Destination" required />
+                </td>
+                <td>
+                    <input type="date" name="date" required />
+                </td>
+                <td>
+                    <select name="seats" required>
+                        <option value="">Select seats</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="local">
+                        <input id="local" type="checkbox" name="local" value="1" /> GurjarNagari
+                    </label>
+                    <label for="express">
+                        <input id="express" type="checkbox" name="express" value="2" /> Express
+                    </label>
+                    <label for="ac">
+                        <input id="ac" type="checkbox" name="ac" value="3" /> AC
+                    </label>
+                    <label for="sleeper">
+                        <input id="sleeper" type="checkbox" name="sleeper" value="4" /> Sleeper
+                    </label>
+                </td>
+                <td>
+                    <input type="submit" value="search" name="search" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
