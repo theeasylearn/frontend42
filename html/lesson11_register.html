@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="success.html" method="post" enctype="multipart/form-data">
+        <table border="1" align="center" cellpadding="10" width="50%">
+            <tr>
+                <td>
+                    <label for="firstname">Name</label> <br />
+                    <input type="text" name="firstname" id="firstname" required />
+                </td>
+                <td>
+                    <label for="fathername">Father name</label> <br />
+                    <input type="text" name="fathername" id="fathername" required />
+                </td>
+                <td>
+                    <label for="surname">Sur name</label> <br />
+                    <input type="text" name="surname" id="surname" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender <br/>
+                    <label for="male">
+                        <input type="radio" name="gender" id="male" value="1">Male 
+                    </label>
+                    <label for="female">
+                        <input type="radio" name="gender" id="female" value="2">Female 
+                    </label>
+                    
+                </td>
+                <td>
+                    <label for="dob">Date of birth</label> <br/>
+                    <input type="date" name="dob" id="dob" />
+                </td>
+                <td>
+                    Photo<br/>
+                    <input type="file" name="photo" id="photo" accept="image/*" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="income">Income</label> <br/>
+                    <input type="number" name="income" id="income" required />
+                </td>
+                <td>
+                    <label for="weight">Weight</label> <br/>
+                    <input type="number" name="weight" id="weight" step="0.02">
+                </td>
+                <td>
+                    <label for="email">Email</label> <br/>
+                    <input type="email" name="email" id="email" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="country">Select Country</label> <br/>
+                    <select name="asian-countries" id="asian-countries">
+                        <option value="afghanistan">Afghanistan</option>
+                        <option value="armenia">Armenia</option>
+                        <option value="azerbaijan">Azerbaijan</option>
+                        <option value="bahrain">Bahrain</option>
+                        <option value="bangladesh">Bangladesh</option>
+                        <option value="bhutan">Bhutan</option>
+                        <option value="brunei">Brunei</option>
+                        <option value="cambodia">Cambodia</option>
+                        <option value="china">China</option>
+                        <option value="cyprus">Cyprus</option>
+                        <option value="georgia">Georgia</option>
+                        <option value="india">India</option>
+                        <option value="indonesia">Indonesia</option>
+                        <option value="iran">Iran</option>
+                        <option value="iraq">Iraq</option>
+                        <option value="israel">Israel</option>
+                        <option value="japan">Japan</option>
+                        <option value="jordan">Jordan</option>
+                        <option value="kazakhstan">Kazakhstan</option>
+                        <option value="kuwait">Kuwait</option>
+                        <option value="kyrgyzstan">Kyrgyzstan</option>
+                        <option value="laos">Laos</option>
+                        <option value="lebanon">Lebanon</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="mongolia">Mongolia</option>
+                        <option value="myanmar">Myanmar</option>
+                        <option value="nepal">Nepal</option>
+                        <option value="north-korea">North Korea</option>
+                        <option value="oman">Oman</option>
+                        <option value="pakistan">Pakistan</option>
+                        <option value="palestine">Palestine</option>
+                        <option value="philippines">Philippines</option>
+                        <option value="qatar">Qatar</option>
+                        <option value="saudi-arabia">Saudi Arabia</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="south-korea">South Korea</option>
+                        <option value="sri-lanka">Sri Lanka</option>
+                        <option value="syria">Syria</option>
+                        <option value="taiwan">Taiwan</option>
+                        <option value="tajikistan">Tajikistan</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="timor-leste">Timor-Leste</option>
+                        <option value="turkey">Turkey</option>
+                        <option value="turkmenistan">Turkmenistan</option>
+                        <option value="united-arab-emirates">United Arab Emirates</option>
+                        <option value="uzbekistan">Uzbekistan</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="yemen">Yemen</option>
+                    </select>
+                    
+                </td>
+                <td>
+                    <label for="address">Adress</label> <br/>
+                    <textarea name="address" id="address"></textarea>
+                </td>
+                <td>
+                    <button type="submit">Register</button>
+                    <button type="reset">clear</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
