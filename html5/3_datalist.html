@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Search Bus</h1>
+    <form action="success.html" method="get">
+        <table align="center" width="80%" cellpadding="10" bgcolor="#eeeeee" border="2">
+            <tr>
+                <td>
+                    <input type="text" name="source" placeholder="Source" list="cities" required />
+                </td>
+                <td>
+                    <input type="text" name="destination" list="cities" placeholder="Destination" required />
+                </td>
+                <td>
+                    <input type="date" name="date" required />
+                </td>
+                <td>
+                    <select name="seats" required>
+                        <option value="">Select seats
+                        <option value="">1
+                        <option value="">2
+                        <option value="">3
+                        <option value="">4
+                        <option value="">5
+                        <option value="">6
+                    </select>
+                </td>
+                <td>
+                    <label for="local">
+                        <input id="local" type="checkbox" name="local" value="1" /> GurjarNagari
+                    </label>
+                    <label for="express">
+                        <input id="express" type="checkbox" name="express" value="2" /> Express
+                    </label>
+                    <label for="ac">
+                        <input id="ac" type="checkbox" name="ac" value="3" /> AC
+                    </label>
+                    <label for="sleeper">
+                        <input id="sleeper" type="checkbox" name="sleeper" value="4" /> Sleeper
+                    </label>
+                </td>
+                <td>
+                    <input type="submit" value="search" name="search" />
+                </td>
+            </tr>
+        </table>
+
+        <datalist id="cities">
+            <option value="Mumbai" />
+            <option value="Delhi" />
+            <option value="Bangalore" />
+            <option value="Hyderabad" />
+            <option value="Ahmedabad" />
+            <option value="Chennai" />
+            <option value="Kolkata" />
+            <option value="Surat" />
+            <option value="Pune" />
+            <option value="Jaipur" />
+            <option value="Lucknow" />
+            <option value="Kanpur" />
+            <option value="Nagpur" />
+            <option value="Visakhapatnam" />
+            <option value="Indore" />
+            <option value="Thane" />
+            <option value="Bhopal" />
+            <option value="Coimbatore" />
+            <option value="Vijayawada" />
+            <option value="Mysore" />
+            <option value="Patna" />
+            <option value="Madurai" />
+            <option value="Gujarat Nagar" />
+            <option value="Nashik" />
+            <option value="Faridabad" />
+            <option value="Rajkot" />
+            <option value="Kalyan-Dombivli" />
+            <option value="Vasai-Virar City" />
+            <option value="Varanasi" />
+            <option value="Srinagar" />
+            <option value="Aurangabad" />
+            <option value="Dhanbad" />
+            <option value="Amritsar" />
+            <option value="Navi Mumbai" />
+            <option value="Allahabad (Prayagraj)" />
+              <option	value ="Ranchi" />
+              <option	value ="Howrah" />
+              <option	value ="Jabalpur" />
+              <option	value ="Gwalior" />
+              <option	value ="Coimbatore" />
+              <option	value ="Kota" />
+              <option	value ="Solapur" />
+              <option	value ="Warangal" />
+              <option	value ="Tiruchirappalli (Trichy)" />
+              <option	value ="Bhubaneswar" />
+              <option	value ="Salem" />
+              <option	value ="Mira-Bhayandar" />
+              <option	value ="Jodhpur" />
+              <option	value ="Raipur" />
+              <option	value ="Gurugram" />
+              <option	value ="Bikaner" />
+              <option	value ="Noida" />
+              <option	value ="Siliguri" />
+              <option	value ="Jammu" />
+              <option	value ="Bhavnagar" />
+              <option	value ="Dehradun" />
+              <option	value ="Durgapur" />
+              <option	value ="Raurkela" />
+              <option	value ="Kochi" />
+              <option	value ="Guntur" />
+              <option	value ="Udaipur" />
+              <option	value ="Kakinada" />
+              <option	value ="Bhatinda" />
+              <option	value ="Kharagpur" />
+              <option	value ="Tumkur" />
+              <option	value ="Davanagere" />
+              <option	value ="Aligarh" />
+              <option	value ="Agra" />
+              <option	value ="Puducherry (Pondicherry)" />
+              <option	value ="Saharanpur" />
+              <option	value ="Bardhaman (Burdwan)" />
+              <option	value ="Rudrapur" />
+              <option	value ="Jalgaon" />
+              <option	value ="Hapur" />
+              <option	value ="Moradabad" />
+              <option	value ="Bareilly" />
+              <option	value ="Bhuj" /> 
+              <option value="Ambala" />
+              <option value="Agartala" />
+              <option value="Asansol" />
+              <option value="Bhilai Nagar" />
+              <option value="Dibrugarh" /> 
+              <option value="Gaya" /> 
+              <option value="Haldwani-cum-Kathgodam" /> 
+              <option value="Kota Rajasthan" /> 
+              <option value="Kozhikode (Calicut)" />
+          
+        </datalist>
+    </form>
+</body>
+</html>
