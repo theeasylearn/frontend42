@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- file:///C:/code/frontend42/html5/success.html?fullname=Deborah+Stafford&password=SDFSDFSDF&email=home%40mailinator.com&phone=%2B1+%28578%29+459-2626&dob=1991-06-25&age=100&favcolor=%231fdabf&fileupload=User+Guide.ico&pancard=ANBPP1234C&address=1234-1234-1234 -->
+<body>
+    <h1>Input in html 5</h1>
+    <hr>
+    <form action="success.html" method="get">
+        <table border="1" cellpadding="10" width="60%" align="center">
+            <tr>
+                <td width="30%">
+                    <label for="fullname">Full Name</label>
+                </td>
+                <td>
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password</label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">Phone</label>
+                </td>
+                <td>
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of Birth</label>
+                </td>
+                <td>
+                    <input type="date" name="dob" id="dob" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">Age</label>
+                </td>
+                <td>
+                    <input type="number" name="age" id="age" placeholder="Enter your age" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="favcolor">Favorite Color</label>
+                </td>
+                <td>
+                    <input type="color" name="favcolor" id="favcolor" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fileupload">Upload photo</label>
+                </td>
+                <td>
+                    <input type="file" name="fileupload" id="fileupload" required
+                    accept="image/*" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pancard">Pan Card (XXXXX9999X)</label>
+                </td>
+                <td>
+                    <input type="text" name="pancard" id="pancard" placeholder="Enter your PAN card number" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">Aadhar card no 9999-9999-9999</label>
+                </td>
+                <td>
+                    <input type="text" name="address" id="address" placeholder="Enter your address" required pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register" />
+                    <input type="reset" value="Clear All" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+
+</html>
