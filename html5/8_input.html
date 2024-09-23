@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- file:///C:/code/frontend42/html5/success.html?fullname=Deborah+Stafford&password=SDFSDFSDF&email=home%40mailinator.com&phone=%2B1+%28578%29+459-2626&dob=1991-06-25&age=100&favcolor=%231fdabf&fileupload=User+Guide.ico&pancard=ANBPP1234C&address=1234-1234-1234 -->
+
 <body>
     <h1>Input in html 5</h1>
     <hr>
-    <form action="success.html" method="get">
+    <form action="success.html" method="post" autocomplete="on">
         <table border="1" cellpadding="10" width="60%" align="center">
             <tr>
                 <td width="30%">
                     <label for="fullname">Full Name</label>
                 </td>
                 <td>
-                    <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required>
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required autofocus>
                 </td>
             </tr>
             <tr>
@@ -33,7 +33,7 @@
                     <label for="email">Email</label>
                 </td>
                 <td>
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required autocomplete="off" />
                 </td>
             </tr>
             <tr>
@@ -49,7 +49,8 @@
                     <label for="dob">Date of Birth</label>
                 </td>
                 <td>
-                    <input type="date" name="dob" id="dob" required>
+                    <input type="date" name="dob" id="dob" required
+                    max="2024-09-23" />
                 </td>
             </tr>
             <tr>
@@ -57,7 +58,8 @@
                     <label for="age">Age</label>
                 </td>
                 <td>
-                    <input type="number" name="age" id="age" placeholder="Enter your age" required>
+                    <input type="number" name="age" id="age" placeholder="Enter your age" required
+                    min="18" max="60">
                 </td>
             </tr>
             <tr>
@@ -74,7 +76,7 @@
                 </td>
                 <td>
                     <input type="file" name="fileupload" id="fileupload" required
-                    accept="image/*" />
+                    accept="video/*" multiple />
                 </td>
             </tr>
             <tr>
@@ -95,7 +97,8 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" value="Register" />
+                    <input type="submit" value="Register as student" />
+                    <input type="submit" value="Register as parent" formaction="success_2.html" />
                     <input type="reset" value="Clear All" />
                 </td>
             </tr>
