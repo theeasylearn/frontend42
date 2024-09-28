@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-border
+        {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+        }
+        .one-third 
+        {
+            width:33%;
+            height:200px;
+        }
+        .half 
+        {
+            width:50%;
+            height:200px;
+        }
+        .fixed-width 
+        {
+            width:300px;
+            height:200px;
+            overflow: scroll;
+        }
+        .large-text 
+        {
+            font-size: large;
+        }
+        .gap 
+        {
+            padding-left:10px;
+            padding-right: 8px;
+            padding-top:10px;
+            padding-bottom: 10px;
+        }
+        .space
+        {
+            margin-left:10px;
+            margin-right:5px;
+            margin-bottom: 20px;
+        }
+        .bottom-right-shadow
+        {
+            box-shadow: 5px 5px 5px gray;
+        }
+        .top-left-shadow
+        {
+            box-shadow: -5px -5px 5px gray;
+        }
+        .all-side-shadow 
+        {
+            box-shadow: 5px 5px 5px gray,   -5px -5px 5px gray;
+        }
+
+        .circle 
+        {
+            height: 200px;
+            width:200px;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+        .center-logo 
+        {
+            height: 200px;
+            width:200px;
+            border-radius: 100%;
+            border: 2px solid black;
+            overflow: hidden;
+            /* put content in center horizontally and vertically */
+            display: flex; 
+            justify-content: center; /* center horizontally */
+            align-items: center; /* center horizontally */
+        }
+    </style>
+</head>
+<body>
+    <h1>Box modal related properties</h1>
+    <div class="box-border one-third large-text gap space bottom-right-shadow">
+        <h3>1/3 sized div tag.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa optio vel quas id dignissimos porro est temporibus eaque asperiores aliquam laborum totam molestiae, neque eligendi eos nisi officia amet illo. Nihil nobis eius reprehenderit asperiores eos. Sunt, ea nostrum ipsum ratione temporibus eos recusandae maiores hic magnam reprehenderit porro est.</p>
+    </div>
+    <div class="box-border half large-text gap space top-left-shadow">
+       <h3>  1/2 sized div tag </h3>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias qui aut commodi omnis eaque. Accusamus non molestias labore! Molestias labore laboriosam esse asperiores amet. Eveniet at incidunt dolores numquam perspiciatis, aperiam ad necessitatibus quia quaerat vel recusandae iure exercitationem ratione consequuntur neque omnis, consequatur, hic reiciendis vitae magnam soluta optio?</p>
+    </div>
+    <div class="box-border fixed-width large-text gap space all-side-shadow">
+        <h3>fixed sized div tag </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit velit, id expedita ut deleniti consequatur eos doloribus ullam omnis excepturi nostrum inventore! Porro, quam? Officia ab cupiditate voluptates aliquid expedita ex, nam autem odio. Cupiditate necessitatibus sapiente atque recusandae, quaerat, ducimus error excepturi odit non distinctio nobis aspernatur alias eos?</p>
+    </div>
+    <div class="circle all-side-shadow">
+        <img src="http://picsum.photos/300" alt="" />
+    </div>
+    <div class="center-logo">
+        <img src="http://picsum.photos/50" alt="" />
+    </div>
+    </div>
+</body>
+</html>
