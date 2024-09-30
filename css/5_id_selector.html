@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id selector style */
+        #menu 
+        {
+            background-color: bisque;
+            display: flex;
+            justify-content: space-between; /* work only if display is flex */
+            align-items: center; 
+        }
+        #logo-heading
+        {
+            /* background-color: aliceblue; */
+            display: flex;
+            align-items: center; /*vertical alignment work only if display is flex */
+            gap:20px;
+        }
+        #navigation
+        {
+            display: flex;
+            list-style-type: none;
+            gap: 20px;            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <div id="logo-heading">
+                <img src="https://picsum.photos/100" />
+                <h3>The easylearn academy</h3>
+            </div>
+            <div>
+                <ul id="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <footer>
+        <p>Developed By : frontend42@gmail.com</p>
+    </footer>
+</body>
+</html>
