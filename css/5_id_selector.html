@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* universal selector  */
+        *
+        {
+            margin:0px;
+        }
         /* id selector style */
+        #site_header 
+        {
+            top:0px;
+            left:0px;
+            position: sticky;
+        }
         #menu 
         {
             background-color: bisque;
@@ -24,13 +35,41 @@
         {
             display: flex;
             list-style-type: none;
-            gap: 20px;            
+            gap: 20px;   /* works only if display is flex */         
         }
-        
+        #site_footer
+        {
+            background-color: black;
+            color:white;
+            padding:20px 0px 20px 0px; /* top right bottom left (clock wise) */
+            position: sticky;
+            bottom: 0px;
+            left: 0px;
+        }
+        /* below style only apply to direct pargraph child of site_footer */
+        #site_footer>p 
+        {
+            text-align: center;
+        }
+        /* class selector style */
+        .news 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            padding: 10px;
+        }
+        /* below style only apply to direct article child of news */
+        .news>article
+        {
+            width:calc(25% - 10px);
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header id="site_header">
         <nav id="menu">
             <div id="logo-heading">
                 <img src="https://picsum.photos/100" />
@@ -47,8 +86,93 @@
             </div>
         </nav>
     </header>
+    <section class="news">
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
 
-    <footer>
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
+            
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
+            
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
+            
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
+            
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
+            
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
+            
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h3>Article Heading</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, atque assumenda doloribus distinctio numquam corrupti! Quod doloremque rerum vero repudiandae quasi. At quaerat qui iusto voluptates sunt esse fugiat! Mollitia, facilis qui ab dolores commodi quis provident quisquam soluta nobis tempora accusamus asperiores hic illo amet? Perspiciatis amet hic veniam doloremque, accusamus, odio rerum, consequuntur voluptates id excepturi dolore explicabo nobis culpa corrupti ea tempora possimus quas voluptatum dicta dolor molestiae omnis obcaecati maxime ut. Odit consequuntur dolor pariatur, porro aut laudantium? Odio suscipit animi error voluptatum unde, aut architecto soluta, corporis consequuntur iure voluptate est enim quod dolore explicabo!</p>
+            
+            <footer>
+                <p>Written By : author Date 02-10-2024</p>
+            </footer>
+        </article>
+    </section>
+    <footer id="site_footer">
         <p>Developed By : frontend42@gmail.com</p>
     </footer>
 </body>
