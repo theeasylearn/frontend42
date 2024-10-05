@@ -1,0 +1,129 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+}
+body 
+{
+    background-color: beige;
+}
+#animation
+{
+    border: 1px solid brown;
+    padding:10px;
+    display: flex;
+    gap: 10px;
+}
+
+#animation>div 
+{
+    width:20%;
+    height:100px;
+    padding:10px;
+    background-color: brown;
+}
+#one 
+{
+    color:white;
+    font-size: xxx-large;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* this is how we define anime-one */
+@keyframes anime-one 
+{
+    0%
+    {
+        background-color: brown;
+        color:white;
+    }
+    25%
+    {
+        background-color: #A95607;
+    }
+    50%
+    {
+        background-color: #BE7505;
+    }
+    75%
+    {
+        background-color: #E9B402;
+    }
+    100%
+    {
+        background-color: yellow;
+        color:black;
+    }
+}
+#one:hover 
+{
+    animation-duration: 1000ms;
+    animation-name: anime-one; /* we have to define anime-one */
+}
+#two:hover 
+{
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards; /* Keeps the final state of the animation */
+    animation-name: anime-two; /* we have to define anime-one */
+}
+@keyframes anime-two {
+    50%
+    {
+        height:200px;
+        width:200px;
+        border-radius: 50%;
+    }
+    75%
+    {
+        height:200px;
+        width:200px;
+        border-radius: 75%;
+    }
+    100%
+    {
+        height:200px;
+        width:200px;
+        border-radius: 100%;
+    }
+}
+
+#three:hover 
+{
+    animation-duration: 10ms;
+    animation-fill-mode: forwards; /* Keeps the final state of the animation */
+    animation-name: anime-rotate; /* we have to define anime-one */
+    animation-iteration-count:infinite;
+}
+
+@keyframes anime-rotate{
+    0%
+    {
+        transform: rotate(0deg);
+    }    
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+#four:hover 
+{
+    animation-duration: 1000ms;
+    animation-name: anime-blink; /* we have to define anime-one */
+    animation-iteration-count:infinite;
+}
+
+@keyframes anime-blink{
+    0%
+    {
+        transform: scale(1,1) rotate(0deg);
+    }    
+    50%
+    {
+        transform: scale(1.5,1.5) rotate(180deg);
+    }
+    100%
+    {
+        transform: scale(1,1) rotate(0deg);
+    }
+}
