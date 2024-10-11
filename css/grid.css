@@ -1,0 +1,48 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    box-sizing: content-box;
+}
+body 
+{
+    background-color: antiquewhite;
+}
+
+#site 
+{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: 
+    "header header header"
+    "menu content sidebar"
+    "footer footer footer";
+    grid-template-rows: 10% 80% 10%;
+}
+#site>div 
+{
+    border: 1px solid black;
+}
+
+#header
+{
+    grid-area: header;
+}
+#menu
+{
+    grid-area: menu;
+}
+#content
+{
+    grid-area: content;
+}
+#sidebar
+{
+    grid-area:sidebar
+}
+#footer 
+{
+    grid-area: footer;
+}

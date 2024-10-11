@@ -1,0 +1,7 @@
+1) create grid using images/grid-exercise-1.png
+2) create grid using images/grid-exercise-2.jpeg
+3) create grid using images/grid-exercise-3.png
+4) add vertical menu in div tag with id menu in 11_grid_2.html
+5) add horizontal menu in div tag with header in 11_grid_2.html
+
+
