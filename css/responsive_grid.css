@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    box-sizing: content-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+#site {
+    height: 100vh;
+    display: grid;
+
+}
+
+#site>div {
+    border: 1px solid black;
+}
+
+#header {
+    grid-area: header;
+}
+
+#menu {
+    grid-area: menu;
+}
+
+#content {
+    grid-area: content;
+}
+
+#sidebar {
+    grid-area: sidebar
+}
+
+#footer {
+    grid-area: footer;
+}
+#menu>ul 
+{
+    height: 100%;
+    list-style-type: none;
+    /* padding-left: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* padding-top: 20px; */
+}
+#menu>ul>li>a:link, #menu>ul>li>a:visited 
+{
+    background-color: brown;
+    padding:20px 10px;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    width:200px;
+    display: inline-block;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 5px gray;
+}
+/* media query template */
+
+/*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /* code in this block will be applied only if device width>320 and <480 */
+    #site {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer";
+        grid-template-rows: 10% 60% 20% 10%;
+    }
+}
+
+/* ##Device = Low Resolution Tablets,  ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    /* code in this block will be applied only if device width>481 and <767 */
+    #site {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer";
+        grid-template-rows: 10% 60% 20% 10%;
+    }
+}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* code in this block will be applied only if device width>768 and <1024 */
+    #site {
+        grid-template-columns: 20% 60% 20%;
+        grid-template-areas:
+            "header header header"
+            "menu content sidebar"
+            "footer footer footer";
+        grid-template-rows: 10% 80% 10%;
+    }
+}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px)  {
+    /* code in this block will be applied only if device width>1025 and <1280 */
+    #site {
+        grid-template-columns: 20% 60% 20%;
+        grid-template-areas:
+            "header header header"
+            "menu content sidebar"
+            "footer footer footer";
+        grid-template-rows: 10% 80% 10%;
+    }
+}
