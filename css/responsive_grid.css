@@ -29,7 +29,9 @@ body {
 
 #content {
     grid-area: content;
+    padding: 20px;
 }
+
 
 #sidebar {
     grid-area: sidebar
@@ -38,8 +40,8 @@ body {
 #footer {
     grid-area: footer;
 }
-#menu>ul 
-{
+
+#menu>ul {
     height: 100%;
     list-style-type: none;
     /* padding-left: 20px; */
@@ -48,20 +50,42 @@ body {
     gap: 40px;
     /* padding-top: 20px; */
 }
-#menu>ul>li>a:link, #menu>ul>li>a:visited 
-{
+
+#menu>ul>li>a:link,
+#menu>ul>li>a:visited {
     background-color: brown;
-    padding:20px 10px;
-    color:white;
+    padding: 20px 10px;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    width:200px;
+    width: 200px;
     display: inline-block;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 5px 5px 5px gray;
 }
+
+.single-blog-image {
+    height: 230px;
+    width: 230px;
+}
+
+.blog-post {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 10px;
+    background-color: #E2C799;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+.blog-content {
+    font-size: 1.1rem;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
 /* media query template */
 
 /*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
@@ -75,12 +99,23 @@ body {
             "content"
             "sidebar"
             "footer";
-        grid-template-rows: 10% 60% 20% 10%;
+        grid-template-rows: 10% 200% 20% 10%;
+    }
+
+    #grid_content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #menu>ul>li>a:link,
+    #menu>ul>li>a:visited {
+        display: none;
     }
 }
 
 /* ##Device = Low Resolution Tablets,  ##Screen = B/w 481px to 767px */
 @media (min-width: 481px) and (max-width: 767px) {
+
     /* code in this block will be applied only if device width>481 and <767 */
     #site {
         grid-template-columns: 100%;
@@ -89,25 +124,41 @@ body {
             "content"
             "sidebar"
             "footer";
-        grid-template-rows: 10% 60% 20% 10%;
+        grid-template-rows: 10% 141% 20% 10%;
     }
+
+
+    #grid_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
 }
 
 /* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
+
     /* code in this block will be applied only if device width>768 and <1024 */
     #site {
         grid-template-columns: 20% 60% 20%;
         grid-template-areas:
             "header header header"
-            "menu content sidebar"
+            "content content content"
             "footer footer footer";
         grid-template-rows: 10% 80% 10%;
     }
+
+    #grid_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
 
 /* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
-@media (min-width: 1025px)  {
+@media (min-width: 1025px) {
+
     /* code in this block will be applied only if device width>1025 and <1280 */
     #site {
         grid-template-columns: 20% 60% 20%;
@@ -117,4 +168,10 @@ body {
             "footer footer footer";
         grid-template-rows: 10% 80% 10%;
     }
+
+    #grid_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
