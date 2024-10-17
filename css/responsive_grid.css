@@ -20,7 +20,11 @@ body {
 }
 
 #header {
+    background-color: brown;
     grid-area: header;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 #menu {
@@ -39,6 +43,12 @@ body {
 
 #footer {
     grid-area: footer;
+    background-color: brown;
+    color: white;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #menu>ul {
@@ -86,6 +96,30 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+.sidebar_link {
+    font-size: 2.2rem;
+    height: 57px;
+    font-family: "DM Serif Display", serif;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single_sidebar_link {
+    color: white;
+    text-decoration: none;
+}
+
+#header_logo {
+    height: 70px;
+    border-radius: 15px;
+}
+
 /* media query template */
 
 /*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
@@ -97,7 +131,6 @@ body {
         grid-template-areas:
             "header"
             "content"
-            "sidebar"
             "footer";
         grid-template-rows: 10% 200% 20% 10%;
     }
@@ -122,7 +155,6 @@ body {
         grid-template-areas:
             "header"
             "content"
-            "sidebar"
             "footer";
         grid-template-rows: 10% 141% 20% 10%;
     }
@@ -166,7 +198,7 @@ body {
             "header header header"
             "menu content sidebar"
             "footer footer footer";
-        grid-template-rows: 10% 80% 10%;
+        grid-template-rows: 15% 80% 10%;
     }
 
     #grid_content {
