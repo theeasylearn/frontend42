@@ -25,6 +25,26 @@ body {
     padding-bottom: 10px;
     padding-top: 20px;
     padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header>ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+#header>ul>li>a:link,
+#header>ul>li>a:visited {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    color: brown;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 #menu {
@@ -78,7 +98,7 @@ body {
 
 .single-blog-image {
     height: 230px;
-    width: 230px;
+    width: 100%;
 }
 
 .blog-post {
@@ -86,8 +106,8 @@ body {
     border-radius: 10px;
     background-color: #E2C799;
     padding: 10px;
-    margin: 10px;
-    width: 250px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .blog-content {
@@ -97,7 +117,7 @@ body {
 }
 
 .sidebar_link {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     height: 57px;
     font-family: "DM Serif Display", serif;
     margin-top: 20px;
@@ -120,6 +140,16 @@ body {
     border-radius: 15px;
 }
 
+#grid_content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#menu_button {
+    display: none;
+}
+
 /* media query template */
 
 /*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
@@ -135,14 +165,26 @@ body {
         grid-template-rows: 10% 200% 20% 10%;
     }
 
+    #header>ul {
+        display: none;
+    }
+
     #grid_content {
-        display: grid;
-        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    #grid_content>div {
+        width: 100%;
     }
 
     #menu>ul>li>a:link,
     #menu>ul>li>a:visited {
         display: none;
+    }
+
+    #menu_button {
+        display:inline-block;
+        margin-right: 10px;
     }
 }
 
@@ -159,13 +201,17 @@ body {
         grid-template-rows: 10% 141% 20% 10%;
     }
 
-
-    #grid_content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    #grid_content>div {
+        width: calc(50% - 20px);
     }
 
-
+    #header>ul {
+        display: none;
+    }
+    #menu_button {
+        display:inline-block;
+        margin-right: 10px;
+    }
 }
 
 /* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
@@ -181,11 +227,18 @@ body {
         grid-template-rows: 10% 80% 10%;
     }
 
-    #grid_content {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+
+    #grid_content>div {
+        width: calc(33.33% - 20px);
     }
 
+    #header>ul {
+        display: none;
+    }
+    #menu_button {
+        display:inline-block;
+        margin-right: 10px;
+    }
 }
 
 /* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
@@ -201,9 +254,9 @@ body {
         grid-template-rows: 15% 80% 10%;
     }
 
-    #grid_content {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+
+    #grid_content>div {
+        width: calc(33.33% - 20px);
     }
 
 }
