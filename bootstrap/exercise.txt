@@ -1,0 +1,49 @@
+1) : Responsive Product Cards
+
+Design a product listing with 12 cards, making sure the layout adjusts across various screen sizes:
+
+    1 card per row on mobile screens.
+    2 cards per row on tablets.
+    3 cards per row on medium screens.
+    4 cards per row on large screens.
+    6 cards per row on extra-large screens.
+
+2) : Responsive Image Gallery
+
+Implement a responsive image gallery:
+
+    Stack 20 images vertically on mobile.
+    
+    Display 2 images per row on tablets.
+    Display 3 images per row on medium screens.
+    Display 4 images per row on large screens.
+    Display 6 images per row on extra-large screens.
+
+    apply img-fluid to each and every image
+
+3): Responsive Pricing Table
+
+Create a responsive pricing table that displays different pricing plans. Adjust the layout based on screen size:
+
+    Stack pricing plans vertically on mobile devices.
+    Display 2 pricing plans per row on tablets.
+    Display 3 pricing plans per row on medium screens.
+    Display all pricing plans in a single row on large and extra-large screens.
+
+4): Responsive Testimonial Section
+
+Design a responsive testimonial section where user reviews are displayed:
+
+    On mobile screens, display 1 testimonial per row.
+    On tablet screens, display 2 testimonials per row.
+    On medium screens, display 3 testimonials per row.
+    On large and extra-large screens, display 4 testimonials per row.
+
+5): Responsive Blog Layout
+
+Create a responsive blog layout that adjusts for different screen sizes:
+
+    Display 1 blog post per row on mobile devices.
+    Display 2 blog posts per row on tablet devices.
+    Display 3 blog posts per row on medium screens.
+    Display 4 blog posts per row on large and extra-large screens.
