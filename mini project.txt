@@ -39,7 +39,6 @@ Tour Operator
             each photo has 
                 Title, 
                 Photo 
-
     Testimonials
         many Testimonials 
             Name, 
