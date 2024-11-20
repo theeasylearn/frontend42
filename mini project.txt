@@ -1,0 +1,52 @@
+Tour Operator
+    Home 
+        Menu 
+        Slider 
+        Inside India 
+        Rest of the world 
+        Testimonials
+        Inquiry
+        Whats up call 
+    About us
+        About the company 
+        Mission 
+        Vision 
+        MileStone 
+        Founder Speech
+        Awards Recognition 
+    India
+        North
+            has many tours 
+            each tour 
+                Phone
+                Title 
+                Duration 
+                Inclusion 
+                Rates 
+                Tour detail 
+        South
+        East
+        West 
+        Central
+    World
+        America
+        Australia
+        Middle East & Africa 
+        Europe 
+        Asia 
+    Gallery
+        many photos 
+            each photo has 
+                Title, 
+                Photo 
+
+    Testimonials
+        many Testimonials 
+            Name, 
+            Photo 
+            Testimonials
+    Contact us
+        Name 
+        Email
+        Mobile 
+        Message
