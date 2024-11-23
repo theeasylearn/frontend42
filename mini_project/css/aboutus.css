@@ -1,0 +1,27 @@
+#heading {
+    background: rgb(67, 66, 203);
+    background: linear-gradient(342deg, rgba(67, 66, 203, 1) 14%, rgba(1, 159, 206, 1) 52%, rgba(0, 212, 255, 1) 100%);
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+}
+
+#aboutCompany {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.heading-font {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+}
+
+#mission {
+    margin-top: 106px;
+    margin-bottom: 106px;
+}
