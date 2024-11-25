@@ -1,0 +1,13 @@
+Fonts used in this design:
+
+Font: David Libre
+Author: Multiple Designers
+Url: https://fonts.google.com/specimen/David+Libre
+
+Font: Great Vibes
+Author: TypeSETit
+Url: https://fonts.google.com/specimen/Great+Vibes
+
+Font: Open Sans
+Author: Steve Matteson
+Url: https://fonts.google.com/specimen/Open+Sans
