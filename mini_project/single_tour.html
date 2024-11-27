@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Path Finders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Sriracha&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow-lg"
+        style="background-color: #ed7c0b ;box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/tour_logo.png" style="height: 50px;border-radius: 70px;" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">India</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">World</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Contact us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section id="heading">
+        <h1 style="font-size: 65px !important;color: white;">
+            La Las vegas
+        </h1>
+    </section>
+
+    <section id="tour_detail">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-5">
+                    <div>
+                        <img src="images/las_vegas.jpg" class="rounded-2" style="height: 400px;width: 400px;" alt="">
+                    </div>
+                    <div class="mt-3">
+                        <img src="images/las_vegas.jpg" class="rounded-2 me-2" style="height: 130px;width: 125px;"
+                            alt="">
+                        <img src="images/las_vegas.jpg" class="rounded-2 me-2" style="height: 130px;width: 125px;"
+                            alt="">
+                        <img src="images/las_vegas.jpg" class="rounded-2 me-2" style="height: 130px;width: 125px;"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h1 style="font-size: 65px !important;color: black;font-family: 'Oswald', sans-serif">
+                        La Las vegas
+                    </h1>
+                    <ul class="list-group">
+                        <li class="list-group-item"><b>
+                                Price
+                            </b> : $2000</li>
+                        <li class="list-group-item"><b>
+                                Days
+                            </b> : 2night & 3days</li>
+                        <li class="list-group-item"><b>
+                                Places
+                            </b> : Fountains of Bellagio , High Roller</li>
+                        <li class="list-group-item">
+                            <b>
+                                Stay
+                            </b> : Sky hotel
+                        </li>
+                    </ul>
+                    <p class="lead mt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates accusantium voluptatem rem
+                        nisi architecto temporibus perspiciatis provident harum sit eius tempore, ex atque, ad enim.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem illo nobis sunt deserunt
+                        cum fugiat maxime tenetur! Id eligendi ea ipsum voluptatem, dolore aperiam officia provident
+                        pariatur ipsa. Optio, veritatis.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews mt-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Ratings & reviews
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-2 text-center">
+                                            <img src="images/user1.jpg"
+                                                style="height: 100px;border-radius: 100px;width: 100px;" alt="">
+                                            <div class="text-center">
+                                                <b>
+                                                    User 1
+                                                </b>
+                                            </div>
+                                        </div>
+                                        <div class="col-10">
+                                            <strong>This is the first item's accordion body.</strong> It is shown by
+                                            default,
+                                            until the collapse
+                                            plugin adds the appropriate classes that we use to style each element. These
+                                            classes
+                                            control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify
+                                            any of this with
+                                            custom CSS or overriding our default variables. It's also worth noting that
+                                            just
+                                            about any HTML can go
+                                            within the <code>.accordion-body</code>, though the transition does limit
+                                            overflow.
+                                        </div>
+                                    </div>
+                                    <hr class="">
+                                    <div class="row mt-3">
+                                        <div class="col-10">
+                                            <strong>This is the first item's accordion body.</strong> It is shown by
+                                            default,
+                                            until the collapse
+                                            plugin adds the appropriate classes that we use to style each element. These
+                                            classes
+                                            control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify
+                                            any of this with
+                                            custom CSS or overriding our default variables. It's also worth noting that
+                                            just
+                                            about any HTML can go
+                                            within the <code>.accordion-body</code>, though the transition does limit
+                                            overflow.
+                                        </div>
+                                        <div class="col-2 text-center">
+                                            <img src="images/user2.jpg"
+                                                style="height: 100px;border-radius: 100px;width: 100px;" alt="">
+                                            <div class="text-center">
+                                                <b>
+                                                    User 2
+                                                </b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="">
+                                    <div class="row">
+                                        <div class="col-2 text-center">
+                                            <img src="images/user1.jpg"
+                                                style="height: 100px;border-radius: 100px;width: 100px;" alt="">
+                                            <div class="text-center">
+                                                <b>
+                                                    User 3
+                                                </b>
+                                            </div>
+                                        </div>
+                                        <div class="col-10">
+                                            <strong>This is the first item's accordion body.</strong> It is shown by
+                                            default,
+                                            until the collapse
+                                            plugin adds the appropriate classes that we use to style each element. These
+                                            classes
+                                            control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify
+                                            any of this with
+                                            custom CSS or overriding our default variables. It's also worth noting that
+                                            just
+                                            about any HTML can go
+                                            within the <code>.accordion-body</code>, though the transition does limit
+                                            overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="other-tours mt-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card shadow-lg">
+                                <div class="card-header h2 " style="font-family: 'Oswald', sans-serif;">Canada</div>
+                                <div class="card-body">
+                                    <img src="images/canada.jpeg" class="img-fluid" alt="">
+                                    <div class="text-start mt-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="30"
+                                            viewBox="0 0 270 60">
+                                            <!-- Star 1 -->
+                                            <polygon points="25,0 31,18 50,18 35,30 41,48 25,37 9,48 15,30 0,18 19,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 2 -->
+                                            <polygon
+                                                points="75,0 81,18 100,18 85,30 91,48 75,37 59,48 65,30 50,18 69,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 3 -->
+                                            <polygon
+                                                points="125,0 131,18 150,18 135,30 141,48 125,37 109,48 115,30 100,18 119,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 4 -->
+                                            <polygon
+                                                points="175,0 181,18 200,18 185,30 191,48 175,37 159,48 165,30 150,18 169,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 5 -->
+
+                                        </svg>
+                                        <p class="lead">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+                                        </p>
+                                    </div>
+                                    <div class="text-center d-grid" style="font-family: 'Oswald', sans-serif;">
+                                        <button class="btn " style="background-color: #0A3981; color: white;">View
+                                            Tour</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card shadow-lg">
+                                <div class="card-header h2 " style="font-family: 'Oswald', sans-serif;">Perth </div>
+                                <div class="card-body">
+                                    <img src="images/perth.jpg" class="img-fluid" alt="">
+                                    <div class="text-start mt-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="30"
+                                            viewBox="0 0 270 60">
+                                            <!-- Star 1 -->
+                                            <polygon points="25,0 31,18 50,18 35,30 41,48 25,37 9,48 15,30 0,18 19,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 2 -->
+                                            <polygon
+                                                points="75,0 81,18 100,18 85,30 91,48 75,37 59,48 65,30 50,18 69,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 3 -->
+                                            <polygon
+                                                points="125,0 131,18 150,18 135,30 141,48 125,37 109,48 115,30 100,18 119,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 4 -->
+
+                                        </svg>
+                                        <p class="lead">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+                                        </p>
+                                    </div>
+                                    <div class="text-center d-grid" style="font-family: 'Oswald', sans-serif;">
+                                        <button class="btn " style="background-color: #0A3981; color: white;">View
+                                            Tour</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 mt-3">
+                            <div class="card shadow-lg">
+                                <div class="card-header h2 " style="font-family: 'Oswald', sans-serif;">Melborune</div>
+                                <div class="card-body">
+                                    <img src="images/melbourne.jpeg" class="img-fluid" alt="">
+                                    <div class="text-start mt-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="30"
+                                            viewBox="0 0 270 60">
+                                            <!-- Star 1 -->
+                                            <polygon points="25,0 31,18 50,18 35,30 41,48 25,37 9,48 15,30 0,18 19,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 2 -->
+                                            <polygon
+                                                points="75,0 81,18 100,18 85,30 91,48 75,37 59,48 65,30 50,18 69,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 3 -->
+                                            <polygon
+                                                points="125,0 131,18 150,18 135,30 141,48 125,37 109,48 115,30 100,18 119,18"
+                                                fill="#FFD700" />
+                                            <!-- Star 4 -->
+
+                                        </svg>
+                                        <p class="lead">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+                                        </p>
+                                    </div>
+                                    <div class="text-center d-grid" style="font-family: 'Oswald', sans-serif;">
+                                        <button class="btn " style="background-color: #0A3981; color: white;">View
+                                            Tour</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" style="background-color: #ed7c0b;" class="shadow-lg mt-5">
+        <div class="container p-3">
+            <hr>
+            <div class="row">
+                <div class="col-6">Copyright by frontend42</div>
+                <div class="col-6 text-end">
+                    <div style="display: flex;gap: 20px;justify-content: end;">
+                        <img src="images/facebook.png" style="height: 25px;" alt="">
+                        <img src="images/instagram.png" style="height: 25px;" alt="">
+                        <img src="images/snapchat.png" style="height: 25px;" alt="">
+                        <img src="images/youtube.png" style="height: 25px;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

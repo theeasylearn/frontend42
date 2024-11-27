@@ -37,7 +37,6 @@ Tour Operator
     Gallery
         many photos 
             each photo has 
-                Title, 
                 Photo 
     Testimonials
         many Testimonials 
@@ -49,3 +48,5 @@ Tour Operator
         Email
         Mobile 
         Message
+
+https://shtheme.org/demosd/mecare/?page_id=67
