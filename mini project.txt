@@ -44,7 +44,7 @@ Tour Operator
             Photo 
             Testimonials
     Contact us
-        Name 
+        Address 
         Email
         Mobile 
         Message
