@@ -12994,7 +12994,7 @@ button:focus {
       width: 100px;
       border-radius: 6px; }
   .check-tbl .product-item-close {
-    text-align: right; }
+    text-align: left; }
     .check-tbl .product-item-close a {
       width: 40px;
       height: 40px;

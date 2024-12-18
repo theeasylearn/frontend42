@@ -1,0 +1,17 @@
+1) name of responsive grid related class ( 5m )
+
+2) what is difference between container and container-fluid ( 5m )
+
+3) name 5 classes that are used for bigger font size than heading ( 5m )
+
+4) name any 5 classes which start with "text" ( 5m ) 
+
+5) name all color related class ( 5m - only if 7 or more color are mentioned no mark for less class )
+
+6) name 10 typography related classes ( 10m )
+
+7) name display related class ( 5m )
+
+8) name 2 class for image ( 5m )
+
+9) name any 5 table related class ( 5m )

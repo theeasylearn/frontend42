@@ -1,0 +1,23 @@
+1) Name and explain 5 datatype in flutter ( 5m )
+
+2) Write a programe to findout and print all the even numbers from this list [ 5m ]
+-> [3 , 5 , 9 , 4 , 9 , 5 , 3]
+
+3) Define all types of operator and explain any 3 types of operator ( 10m )
+
+4) Define all loops in dart and explain any 3 loops with example ( 10m )
+
+5) Explain lambda function with example ( 5m )
+
+6) Explain constructor with example ( 5m )
+
+7) Write a programe to peform swap between 2 variable without using 3rd variable ( 5m )
+
+8) name 5 and explain any 3 keywords in dart 
+
+
+1)https://demo.themexbd.com/html/fireit/index.html
+
+2)https://bracketweb.com/firdip-html/index.html
+
+3)https://codeskdhaka.com/html/armado-prev/armado/
