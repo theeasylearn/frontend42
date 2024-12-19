@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Write a programe to findout bmi of user 
+        var weight = parseFloat(prompt("Enter your weight "));
+        var foot = parseInt(prompt("Enter your height in foot "));
+        var inch = parseInt(prompt("Enter your height in inch "));
+
+        console.log("the value of weight is ", weight ," kg");
+        console.log("the value of height is " , foot ,"foot  ");
+        console.log("the value of height is ",inch ," inch ");
+
+        var inchMeter = parseFloat(inch / 39.37) ;
+        var footMeter = parseFloat(foot / 3.281) ; 
+        console.log("the value of inchMeter is ",inchMeter);
+        console.log('the value of footMeter is ',footMeter);
+
+        var bmi = weight /( (footMeter + inchMeter ) * (footMeter + inchMeter));
+        console.log("the value of bmi is ",bmi);
+    </script>
+</body>
+</html>
