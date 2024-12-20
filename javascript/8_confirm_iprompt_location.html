@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Confirm prompt and location in javascript</h1>
+    <script>
+        "use strict";
+        var amount = 0;
+        amount = prompt("Enter amount for donation");
+        var response = confirm("are you sure you want to give donation");
+        if (response == true) { 
+            window.location="https://www.thaagam.org/"
+        }
+        else 
+        {
+            alert('you should give donation');
+        }
+    </script>
+</body>
+
+</html>
