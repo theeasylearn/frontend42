@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a programe to findout wether the given year is millineum year or not 
+        var year = parseInt(prompt("Enter any year "));
+        console.log("The value of year is ", year);
+        // 1000,2000,3000,4000,5000
+        if (year < 0) {
+            console.log("invalid year ");
+        }
+        else if (year % 1000 == 0) {
+            console.log("it is millinuem year ");
+        }
+        else {
+            console.log("it is not a millinuem year ");
+        }
+    </script>
+</body>
+
+</html>

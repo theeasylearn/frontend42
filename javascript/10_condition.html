@@ -10,23 +10,41 @@
 <body>
 
     <script>
-        // write a programe to findout greater number outof given 2 number from user 
+        // write a programe to findout greater number outof given 3 number from user 
 
         var number1 = parseFloat(prompt("Enter value of number 1 "));
         var number2 = parseFloat(prompt("Enter value of number 2 "));
         var number3 = parseFloat(prompt("Enter value of number 3 "));
         console.log("The value of number 1 is", number1);
         console.log("The value of number 2 is", number2);
+        console.log("The value of number 3 is", number3);
 
-        if(number1 > number2){
-            alert("number 1 is greater ");
+        if (number1 == number2 && number2 == number3) {
+            console.log("All are same");
         }
-        else if( number1 == number2 ){
-            alert("number 1 and number 2 are same ");
-        }
-        else
-        {
-            alert("number 2 is greater ");
+        else {
+            if (number1 == number2 || number1 == number3 || number2 == number3) {
+                if (number1 > number3 && number1 == number2) {
+                    console.log("Number 1 is greater")
+                }
+                else if (number2 > number1 && number1 == number3) {
+                    console.log("Number 2 is greater ")
+                }
+                else if (number3 > number1 && number1 == number2) {
+                    console.log("Number 3 is greater ");
+                }
+            }
+            else {
+                if (number1 > number2 && number1 > number3) {
+                    console.log("Number 1 is greater ");
+                }
+                else if (number2 > number3 && number2 > number1) {
+                    console.log("Number 2 is greater ");
+                }
+                else if (number3 > number1 && number3 > number2) {
+                    console.log("Number 3 is greater ");
+                }
+            }
         }
     </script>
 </body>
