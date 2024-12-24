@@ -1,0 +1,8 @@
+Write a programe to findout day from given number 
+-> input = 1,2,3,4,5,6,7
+->output = monday , tuesday , wednesday ...
+
+Write a programe to findout distance of planet from sun , take planets number, output 
+planet name and distance from sun 
+
+Write a programe to findout distance of planet from each other 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // write a programe to findout wether the number is even  or odd 
+        var number = parseInt(prompt("Enter value of number "));
+        var message = "";
+        // if (number % 2 == 0) {
+        //     message = "The number is even ";
+        // }
+        // else {
+        //     message = "The number is odd ";
+        // }
+        
+        message = number == 0 ? "the number is zero " : number % 2 == 0 ? "The number is even" : "the number is odd ";
+        console.log(message);
+    </script>
+</body>
+
+</html>
