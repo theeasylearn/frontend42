@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>example of confirm, prompt and window.location </h1>
+    <script>
+        var donation = prompt("Enter Donation Amount", 1000);
+        var response = confirm('Are you sure you want to give donation of ' + donation);
+        if (response === true) {
+            window.location = 'https://www.smilefoundationindia.org/';
+         }
+         else 
+         {
+            alert('you should give donation');
+         }
+    </script>
+</body>
+
+</html>
