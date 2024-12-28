@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <h1>conditional operators</h1>
+    <script>
+        var age = prompt("what is your age");
+        age = parseInt(age);
+        var website = '';
+        // if (age > 18) {
+        //     website = 'https://www.theeasylearnacademy.com/';
+        // }
+        // else {
+        //     website = 'https://www.wikipedia.com/';
+        // }
+        // or you can write above code like below
+        website = (age > 18) ? 'https://www.theeasylearnacademy.com/' : 'https://www.wikipedia.com/';
+        var output = `<iframe src='${website}' frameborder="0" height="600" width="1400"></iframe>`;
+        document.write(output);
+    </script>
     
 </body>
+
 </html>
