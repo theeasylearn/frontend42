@@ -11,18 +11,15 @@
 
     <script>
         // Write a programe to print cube of all number till 50 
-
         var number1 = 1;
-        var number2 = 2 ; 
+        var number2 = 0;
         console.log(number1);
-        number1 = (number1 + 1) ;
-        number1 = number1 * number1 * number1 ;
-        console.log(number1);
-        number2 = (number2 + 1) ;
-        number2 = number2 * number2 * number2 ;
-        console.log(number2);
-        
-        </script>
+        while (number1 <= 50) {
+            number1 = number1 + 1; // 2 
+            number2 = number1 * number1 * number1; // 8 
+            console.log(number2);
+        }
+    </script>
 </body>
 
 </html>
