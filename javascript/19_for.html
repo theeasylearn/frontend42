@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Write a programe to findout distance of planet from each other 
+        var planet1 = prompt("Enter planet number 1 ");
+        var planet2 = prompt("Enter planet number 2 ");
+        var planet1_name = ""
+        var planet2_name = ""
+        var planet1_distance = "";
+        var planet2_distance = "";
+        var distance = "";
+        console.log(`planet 1 is ${planet1} and planet 2 is ${planet2}`);
+        if (planet1 > 0 && planet1 < 9) {
+            if (planet2 > 0 && planet2 < 9) {
+                if (planet1 == 1) {
+                    planet1_name = "Mercury";
+                    planet1_distance = 57900000
+                }
+                else if (planet1 == 2) {
+                    planet1_name = "Venus";
+                    planet1_distance = 108200000
+                }
+                else if (planet1 == 3) {
+                    planet1_name = "Earth";
+                    planet1_distance = 149600000
+                }
+                else if (planet1 == 4) {
+                    planet1_name = "Mars";
+                    planet1_distance = 227900000
+                }
+                else if (planet1 == 5) {
+                    planet1_name = "Jupiter";
+                    planet1_distance = 778600000
+                }
+                else if (planet1 == 6) {
+                    planet1_name = "Saturn";
+                    planet1_distance = 1433500000
+                }
+                else if (planet1 == 7) {
+                    planet1_name = "Uranus";
+                    planet1_distance = 2872500000
+                }
+                else if (planet1 == 8) {
+                    planet1_name = "Neptune";
+                    planet1_distance = 4495100000
+                }
+                // -------------------------------------------
+                if (planet2 == 1) {
+                    planet2_name = "Mercury";
+                    planet2_distance = 57900000
+
+                }
+                else if (planet2 == 2) {
+                    planet2_name = "Venus";
+                    planet2_distance = 108200000
+
+                }
+                else if (planet2 == 3) {
+                    planet2_name = "Earth";
+                    planet2_distance = 149600000
+
+                }
+                else if (planet2 == 4) {
+                    planet2_name = "Mars";
+                    planet2_distance = 227900000
+
+                }
+                else if (planet2 == 5) {
+                    planet2_name = "Jupiter";
+                    planet2_distance = 778600000
+
+                }
+                else if (planet2 == 6) {
+                    planet2_name = "Saturn";
+                    planet2_distance = 1433500000
+
+                }
+                else if (planet2 == 7) {
+                    planet2_name = "Uranus";
+                    planet2_distance = 2872500000
+
+                }
+                else if (planet2 == 8) {
+                    planet2_name = "Neptune";
+                    planet2_distance = 4495100000
+
+                }
+                console.log(`you have selected ${planet1_name} and ${planet2_name}`);
+                console.log(`distance of ${planet1_name} is ${planet1_distance}`);
+                console.log(`distance of ${planet2_name} is ${planet2_distance}`);
+                distance = planet1_distance - planet2_distance;
+                if (distance < 0) {
+                    distance = distance - distance - distance
+                    console.log(`distance of ${planet1_name} from ${planet2_name} is ${distance}`)
+                }
+                else {
+                    console.log(`distance of ${planet1_name} from ${planet2_name} is ${distance}`)
+                }
+            }
+            else {
+                console.log("Planet 2 does not exsist");
+            }
+        }
+        else {
+            console.log("Planet 1 does not exsist");
+        }
+    </script>
+
+</body>
+
+</html>
