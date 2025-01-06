@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // <!-- Write a programe to findout how many vowel does the string have  -->
+        var phase = prompt("Enter any string/phase ");
+        var vowelCount = 0;
+        var count = 0;
+        console.log("Phase is ", phase);
+        var phaseArray = phase.split('');
+        console.log("Phase array is ", phaseArray);
+        do {
+            if (phaseArray[count] == "a" || phaseArray[count] == "e" || phaseArray[count] == "i" || phaseArray[count] == "o" || phaseArray[count] == "u") {
+                vowelCount = vowelCount + 1;
+            }
+            count++;
+        } while (count <= phaseArray.length);
+        console.log('This is vowel count ', vowelCount)
+    </script>
+</body>
+
+</html>
