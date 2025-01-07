@@ -6,3 +6,9 @@ Write a programe to findout distance of planet from sun , take planets number, o
 planet name and distance from sun 
 
 Write a programe to findout distance of planet from each other 
+
+Write a programe to findout wether the given number is leap year or not 
+
+Write a programe to findout wether the given number is perfect number or not 
+
+Write a programe to findout wether the given number is planidrome or not 
