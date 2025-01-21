@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Write a programe to findout wether the given number is perfect number or not 
+        var number = parseInt(prompt("Enter any number "));
+        var factors = [];
+        var count = 1;
+        var answer = 0;
+        var product = 0;
+        document.write("Number is : ", number);
+        for (count = 1; count <= number; count++) {
+            if (number % count == 0) {
+                factors.push(count)
+            }
+        }
+        document.write("<br>Factors of the number are : ", factors);
+        for (count = 0; count < factors.length; count++) {
+            answer = answer + factors[count]; // 
+        }
+        document.write("<br>Sum of all the factors are : ", answer);
+        product = number * 2;
+        document.write("<br>Product of number is : ", product);
+        if (product == answer) {
+            document.write("<br>" + number + " is a perfect number");
+        }
+        else {
+            document.write("<br>" + number + " is not a perfect number");
+        }
+    </script>
+</body>
+
+</html>
