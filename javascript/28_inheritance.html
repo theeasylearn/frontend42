@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Parent class
+        class Person {
+            walk() {
+                console.log("Person can walk ");
+            }
+            talk() {
+                console.log("Person can talk ");
+            }
+        }
+
+        //Child class
+        class Student extends Person {
+            read() {
+                console.log("Student can read ");
+            }
+            write() {
+                console.log("Student can write ");
+            }
+        }
+
+        var student1 = new Student;
+        student1.walk();
+        student1.talk();
+        student1.read();
+        student1.write();
+
+    </script>
+</body>
+
+</html>
