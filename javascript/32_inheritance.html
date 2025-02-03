@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hierarchical inheritance</h1>
+    <b>use console to see output</b>
+    <script>
+        //Parent class
+        class Person {
+            walk() {
+                console.log("Person can walk ");
+            }
+            talk() {
+                console.log("Person can talk ");
+            }
+        }
+
+        //Child class
+        class Student extends Person {
+            read() {
+                console.log("Student can read ");
+            }
+            write() {
+                console.log("Student can write ");
+            }
+        }
+        //extends derived class
+        class Developer extends Person 
+        {
+            code()
+            {
+                console.log("Developer can write code.");
+            }
+            debug()
+            {
+                console.log("Developer can debug code");
+            }
+        }
+
+        //create developer class object
+        var d1 = new Developer();
+
+        d1.walk();
+        d1.talk();
+        d1.code();
+        d1.debug();
+
+
+        var s1 = new Student();
+        s1.walk();
+        s1.talk();
+        s1.read();
+        s1.write();
+    </script>
+</body>
+
+</html>
