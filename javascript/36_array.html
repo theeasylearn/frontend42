@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>example of array</h1>
+    <table border="1" align="center" width="80%">
+        <tr>
+            <td id="td1"></td>
+            <td id="td2"></td>
+            <td id="td3"></td>
+        </tr>
+    </table>
+    <script>
+        //create list 
+        var fruits = ['mango', 'pinapple', 'cherry', 'graps', 'banana'];
+        console.log(fruits);
+        var td1 = document.getElementById('td1');
+        var td2 = document.getElementById('td2');
+        var td3 = document.getElementById('td3');
+        // fill each fruit into td1 
+        // for (let index = 0; index < fruits.length; index++) { 
+        //     td1.innerHTML += fruits[index] + "<br/>";
+        // }
+
+        fruits.map((item) => {
+            td1.innerHTML+= item + "<br/>";
+        });
+
+        fruits.push('kiwi');
+        fruits.unshift('coconut');
+        fruits.map((item) => {
+            td2.innerHTML+= item + "<br/>";
+        });
+
+        fruits.pop();
+        fruits.shift();
+        fruits.sort();
+        fruits.map((item) => {
+            td3.innerHTML+= item + "<br/>";
+        });
+
+        console.log(fruits.indexOf('banana'));
+        console.log(fruits.indexOf('cherry'));
+        console.log(fruits.indexOf('water melon'));
+        console.log(fruits.includes('water melon'));
+        console.log(fruits.includes('banana'));
+        
+    </script>
+</body>
+
+</html>
