@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Cloning</h1>
+    <hr/> 
+    <script>
+        let book = {
+            name : "The Atomic Habit",
+            author: "james clear"
+        }
+
+        console.log(book);
+        // let book2 = book; //wrong way to copy object
+        //create empty object 
+        book2 = {};
+        for(let key in book)
+        {
+            console.log(key);
+            book2[key] = book[key];
+        }
+        book2.name = "Rich dad poor dad";
+        book2.author = "Robert Kioski";
+        console.log("Book ",book);
+        console.log("Book 2",book2);
+    </script>
+</body>
+</html>

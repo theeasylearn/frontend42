@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Const keyword in javascript</h1>
+    <script>
+        const name = "Ankit";  //read only variable. we cant change it. if we try to change we will get error
+        const surname = "Patel";
+
+        const FullName = name + " " + surname;
+        console.log(name,surname,FullName);
+        // name = "Ankit Bhai"; //it is error
+
+        //blow is not ready only object 
+        const book = {
+            name : "The Atomic Habit",
+            author: "james clear"
+        }
+        book['author'] = "Mr James clear";
+        console.log(book);
+    </script>
+</body>
+</html>
