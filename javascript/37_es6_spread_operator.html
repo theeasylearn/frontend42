@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>es6 spread operator</h1>
+    <script>
+        var fruits = ['apple', 'banana', 'mango', 'orange', 'pinapple'];
+        var vegetables = ['potato', 'tomato', 'onion', 'garlic', 'lady finger'];
+        console.log(fruits);
+        console.log(vegetables);
+        fridge = [...fruits, ...vegetables];
+        console.log(fridge);
+        const person1 = {
+            name: "Alice",
+            age: 25,
+            city: "New York",
+            occupation: "Engineer",
+            hobby: "Photography" // Unique property
+        };
+
+        const person2 = {
+            name: "Bob",
+            age: 30,
+            city: "Los Angeles",
+            occupation: "Designer",
+            favoriteFood: "Sushi" // Unique property
+        };
+
+        console.log(person1);
+        console.log(person2);
+
+        const newPerson = { ...person1, ...person2 };
+        console.log(newPerson);
+
+        const book1 = {
+            title: "The Great Gatsby",
+            author: "F. Scott Fitzgerald",
+            year: 1925,
+            genre: "Fiction",
+            rating: 4.5 // Unique property
+        };
+
+        const book2 = {
+            title: "1984",
+            author: "George Orwell",
+            year: 1949,
+            genre: "Dystopian",
+            pages: 328 // Unique property
+        };
+
+        const book3 = {
+            title: "To Kill a Mockingbird",
+            author: "Harper Lee",
+            year: 1960,
+            genre: "Classic",
+            awards: ["Pulitzer Prize"] // Unique property
+        };
+
+        console.log(book1);
+        console.log(book2);
+        console.log(book3);
+
+        let store = [];
+        store.push(book1);
+        store = [...store,book2];
+        store = [...store,book3];
+        console.log(store);
+
+        
+    </script>
+</body>
+
+</html>

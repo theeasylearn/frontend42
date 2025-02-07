@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap lesson @ the easylearn academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-header">
+                        Car Detail
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table" id="output">
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        const cars = [
+            {
+                brand: "Toyota",
+                model: "Camry",
+                year: 2023,
+                color: "Blue",
+                engine: "2.5L 4-Cylinder",
+                horsepower: 203,
+                torque: "184 lb-ft",
+                transmission: "8-Speed Automatic",
+                drivetrain: "FWD",
+                fuelType: "Gasoline",
+                mpgCity: 28,
+                mpgHighway: 39,
+                seatingCapacity: 5,
+                doors: 4,
+                trunkSpace: "15.1 cu ft",
+                weight: "3,310 lbs",
+                length: "192.1 inches",
+                width: "72.4 inches",
+                height: "56.9 inches",
+                wheelbase: "111.2 inches",
+                infotainmentSystem: "7-inch touchscreen",
+                speakers: 6,
+                safetyRating: "5-Star",
+                airbags: 10,
+                warranty: "3 years / 36,000 miles",
+                price: "$26,000",
+                sunroof: true,
+                bluetooth: true,
+                gps: true,
+                heatedSeats: false
+            },
+            {
+                brand: "Honda",
+                model: "Civic",
+                year: 2024,
+                color: "Red",
+                engine: "1.5L Turbo 4-Cylinder",
+                horsepower: 180,
+                torque: "177 lb-ft",
+                transmission: "CVT",
+                drivetrain: "FWD",
+                fuelType: "Gasoline",
+                mpgCity: 31,
+                mpgHighway: 40,
+                seatingCapacity: 5,
+                doors: 4,
+                trunkSpace: "14.8 cu ft",
+                weight: "2,950 lbs",
+                length: "184 inches",
+                width: "70.9 inches",
+                height: "55.7 inches",
+                wheelbase: "107.7 inches",
+                infotainmentSystem: "9-inch touchscreen",
+                speakers: 8,
+                safetyRating: "5-Star",
+                airbags: 8,
+                warranty: "3 years / 36,000 miles",
+                price: "$24,500",
+                sunroof: false,
+                bluetooth: true,
+                gps: true,
+                heatedSeats: true
+            },
+            {
+                brand: "Ford",
+                model: "Mustang",
+                year: 2025,
+                color: "Black",
+                engine: "5.0L V8",
+                horsepower: 450,
+                torque: "410 lb-ft",
+                transmission: "6-Speed Manual",
+                drivetrain: "RWD",
+                fuelType: "Gasoline",
+                mpgCity: 15,
+                mpgHighway: 24,
+                seatingCapacity: 4,
+                doors: 2,
+                trunkSpace: "13.5 cu ft",
+                weight: "3,750 lbs",
+                length: "188.3 inches",
+                width: "75.4 inches",
+                height: "54.3 inches",
+                wheelbase: "107.1 inches",
+                infotainmentSystem: "12-inch touchscreen",
+                speakers: 12,
+                safetyRating: "5-Star",
+                airbags: 6,
+                warranty: "5 years / 60,000 miles",
+                price: "$43,000",
+                sunroof: true,
+                bluetooth: true,
+                gps: true,
+                heatedSeats: true
+            }
+        ];
+        var row = '';
+        cars.map((car) => {
+            console.log(car);
+            let temp = '';
+            for (let key in car) {
+                temp+= `<td>${car[key]}</td>`;
+            }
+            row += `<tr>${temp}</tr>`;
+        })
+        document.getElementById('output').innerHTML = row;
+    </script>
+</body>
+
+</html>
