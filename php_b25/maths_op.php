@@ -20,26 +20,27 @@
                             <input type="number" name="second" class="form-control form-control-lg" placeholder="second">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input type="radio" id="addition" name="rchoice" class="form-check-input" value="1">
                                         <label for="addition" class="form-check-label">Addition</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input type="radio" id="subtraction" name="rchoice" class="form-check-input" value="2">
                                         <label for="subtraction" class="form-check-label">Subtraction</label>
                                     </div>
-                                    <div  class="form-check">
+                                    <div  class="form-check form-check-inline">
                                         <input type="radio" id="multiplaction" name="rchoice" class="form-check-input" value="3">
                                         <label for="multiplaction" class="form-check-label">Multiplaction</label>
                                     </div>
-                                    <div  class="form-check">
+                                    <div  class="form-check form-check-inline">
                                         <input type="radio" id="divison" name="rchoice" class="form-check-input" value="4">
                                         <label for="divison" class="form-check-label">Division</label>
                                     </div>
-                                    <button class="btn btn-primary" type="submit" name="submit">calcuate</button>
-                                    <button class="btn btn-danger" type="reset">clear All</button> 
                                 </div>
-                                
+                                <div>
+                                <button class="btn btn-primary" type="submit" name="submit">calcuate</button>
+                                <button class="btn btn-danger" type="reset">clear All</button>  
+                                </div>
                             </div>
                         </form>
                     </div>
