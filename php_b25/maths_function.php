@@ -1,5 +1,4 @@
 <?php
-
 $abs = abs(-100);
 echo $abs;
 echo "<br>";
