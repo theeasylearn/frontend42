@@ -25,4 +25,30 @@
     echo "<br>";
     array_unshift($name,"kinjal","manoj");//array_unshift
     print_r($name);
+
+    echo "=========================================================";
+    echo "<br>";
+
+    $person = array("nAMe"=>"ankit","aGE"=>23,"gEnDer"=>true);
+    $person = array_change_key_case($person,CASE_LOWER);
+    print_r($person);
+    extract($person);
+    echo "<br>";
+    echo "name = $name age = $age  gender = $gender";
+    if(array_key_exists("name",$person))
+    {
+        echo "<br/>name is exists in array";
+    }
+    else 
+    {
+        echo "<br/>name is not exist in array";
+    }
+    if(array_key_exists("surname",$person))
+    {
+        echo "<br/>surname is exits in array";
+    }
+    else
+    {
+        echo "</br>surname is not exit";
+    }
 ?>
