@@ -62,4 +62,53 @@ echo "<br/>";
 
 echo str_repeat("@",20);
 
+echo "<br/>";
+
+$junkfood = array("pizza","noddels","bargar","sprite");
+$healthy = array("apple","banana","mango","cocount water");
+$sentance = "We should eat pizza,noddels,bargar and drink sprite";
+echo "<br/>";
+
+echo "before replace : ".$sentance;
+echo "<br/>";
+
+$sentance = str_replace($junkfood,$healthy,$sentance);
+echo "after replace :".$sentance;
+echo "<br/>";
+
+print_r(str_split("Theeasyleanacadamy105",5));
+
+echo "<br/>";
+
+$str = "Hello";
+$str1 = "hello";
+
+$string = strcmp($str,$str1);
+
+if($string > 0)
+{
+    echo "String 1 is grater than string 2";
+}
+else
+{
+    echo "string 1 is less than string 2";
+}
+
+echo "<br/>";
+
+echo strpos("Theeasyleran","an");
+
+echo "<br/>";
+
+echo strtolower("THE EASYLRAN ACADAMY");
+
+echo "<br/>";
+
+echo strtoupper("the easylearn acadamy");
+
+echo "<br/>";
+
+$name = "the easylearn";
+echo ucwords($name);
+
 ?>
