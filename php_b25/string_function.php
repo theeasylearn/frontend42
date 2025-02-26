@@ -110,5 +110,16 @@ echo "<br/>";
 
 $name = "the easylearn";
 echo ucwords($name);
+echo "<br/>";
+
+$text = "the easylearn Acadamy";
+$newtext = wordwrap($text,10,"<br/>");
+echo $newtext;
+echo "<br/>";
+
+echo substr("theeasylearn",1,5);
+echo "<br/>";
+
+echo strstr("ankitpatel@gmail.com","t");
 
 ?>

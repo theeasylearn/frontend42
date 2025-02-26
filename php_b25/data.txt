@@ -133,4 +133,47 @@
  Hello my name is Ayushiba.....        82        911         68 
  Hello my name is Ayushiba.....        75       1455         70 
  Hello my name is Ayushiba.....        90       1240         77 
+ Hello my name is Ayushiba.....        86       1051         82 
+ Hello my name is Ayushiba.....        85        967         71 
+ Hello my name is Ayushiba.....        73       1199         82 
+ Hello my name is Ayushiba.....        85       1460        100 
+ Hello my name is Ayushiba.....        73       1447         86 
+ Hello my name is Ayushiba.....       100       1270         81 
+ Hello my name is Ayushiba.....        63       1240         80 
+ Hello my name is Ayushiba.....        66       1298         72 
+ Hello my name is Ayushiba.....        97        941         90 
+ Hello my name is Ayushiba.....        99       1488         86 
+ Hello my name is Ayushiba.....        83        935         97 
+ Hello my name is Ayushiba.....        69       1089         69 
+ Hello my name is Ayushiba.....        94       1147         69 
+ Hello my name is Ayushiba.....        99       1179         76 
+ Hello my name is Ayushiba.....        94       1397         79 
+ Hello my name is Ayushiba.....        61       1082         91 
+ Hello my name is Ayushiba.....        94       1019         81 
+ Hello my name is Ayushiba.....        76       1055         78 
+ Hello my name is Ayushiba.....        81       1253         79 
+ Hello my name is Ayushiba.....        87        960         75 
+ Hello my name is Ayushiba.....        69       1393         95 
+ Hello my name is Ayushiba.....        79       1101         97 
+ Hello my name is Ayushiba.....        61       1183         79 
+ Hello my name is Ayushiba.....        64       1473         95 
+ Hello my name is Ayushiba.....        92       1350         96 
+ Hello my name is Ayushiba.....        96       1235         65 
+ Hello my name is Ayushiba.....        74       1415         64 
+ Hello my name is Ayushiba.....        85       1162         74 
+ Hello my name is Ayushiba.....        65        976         60 
+ Hello my name is Ayushiba.....        99       1015         80 
+ Hello my name is Ayushiba.....        69       1459         71 
+ Hello my name is Ayushiba.....        62        917         84 
+ Hello my name is Ayushiba.....        66       1316         95 
+ Hello my name is Ayushiba.....        60       1246         69 
+ Hello my name is Ayushiba.....        67       1058         68 
+ Hello my name is Ayushiba.....        94       1180         76 
+ Hello my name is Ayushiba.....        60        952         64 
+ Hello my name is Ayushiba.....        60       1038         73 
+ Hello my name is Ayushiba.....        90       1194         71 
+ Hello my name is Ayushiba.....        96       1439         72 
+ Hello my name is Ayushiba.....        95       1149         94 
+ Hello my name is Ayushiba.....        75       1157         88 
+ Hello my name is Ayushiba.....        98       1080         90 
  Hello my name is Ayushiba.....
