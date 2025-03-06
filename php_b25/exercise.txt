@@ -1,1 +1,10 @@
 
+php excerices
+=====================================================
+zodiac sign programe
+https://www.google.com/url?sa=i&url=https%3A%2F%2Forionbearastronomy.com%2F2018%2F10%2F01%2Fwhy-your-zodiac-sign-may-be-wrong%2F&psig=AOvVaw2D84sCYGSePmKelo9HPZKf&ust=1740836029578000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjE29u95osDFQAAAAAdAAAAABAE
+
+1) give one number is palindrom or not.
+2) print fibonacci series.
+3) give one number is prime no or not.
+4) print the factorial number.  
