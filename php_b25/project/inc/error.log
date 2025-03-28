@@ -1,0 +1,4 @@
+
+ Error Code 1049  ErrorDetail  SQLSTATE[HY000] [1049] Unknown database 'php25' on Thu 27-03-2025 07:38:57 PM in file C:\wamp64\www\frontend42\php_b25\project\inc\error.php at lineno 25
+ Error Code 1049  ErrorDetail  SQLSTATE[HY000] [1049] Unknown database 'php25' on Thu 27-03-2025 07:39:32 PM in file C:\wamp64\www\frontend42\php_b25\project\inc\error.php at lineno 25
+ Error Code 1049  ErrorDetail  SQLSTATE[HY000] [1049] Unknown database 'php25' on Thu 27-03-2025 07:40:44 PM in file C:\wamp64\www\frontend42\php_b25\project\inc\error.php at lineno 25
