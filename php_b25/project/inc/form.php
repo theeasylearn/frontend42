@@ -16,10 +16,11 @@
                     </div>
                     <div class="card-body">
                         <form action="" method="post">
-                            <input type="text" name="user" class="form-control mb-3 from-control-lg" placeholder="Username" required>
-                            <input type="password" name="pwd" class="form-control mb-3 from-control-lg" placeholder="password" required>
+                            <input type="text" name="user" class="form-control mb-3 from-control-lg" placeholder="Username">
+                            <input type="password" name="pwd" class="form-control mb-3 from-control-lg" placeholder="password">
                             <button class="btn btn-primary" type="submit" name="submit">LOGIN</button>
                             <button class="btn btn-danger" type="submit" name="update">Update</button>
+                            <button class="btn btn-success" type="submit" name="delete">Delete</button>
                         </form>
                     </div>
                 </div>
@@ -68,6 +69,24 @@
    if($qry->execute() == true)
    {
     echo  '<script>alert("updated...")</script>';
+
+   }
+   else
+   {
+      echo $e->getMessage();
+      echo "error...";
+   }
+   }
+   if(isset($_POST['delete']))
+   {
+        $user=$_POST['user'];
+        $pwd=$_POST['pwd'];
+        $qry = $db->prepare("delete from login where user=:user");
+        $qry->bindParam(':user',$user); 
+   
+   if($qry->execute() == true)
+   {
+    echo  '<script>alert("Deleted...")</script>';
 
    }
    else

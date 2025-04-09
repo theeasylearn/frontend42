@@ -17,5 +17,5 @@
         $qry->execute();
 
         echo "Your record is inserted....";
-
+       
 ?>
