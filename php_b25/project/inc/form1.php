@@ -18,8 +18,39 @@ if(isset($_POST['save']))
     exit;
 
 }
+if(isset($_GET['delete']))
+{
+    $sql = "DELETE FROM customer WHERE id = ?";
+    $db->prepare($sql)->execute([$_GET['delete']]);
+    echo  '<script>alert("Deleted...")</script>';
+    header("Location:".$_SERVER['PHP_SELF']);
+    exit;
+}
+$userToEdit = NULL;
+if(isset($_GET['edit']))
+{
+    $sql = "SELECT * FROM customer WHERE id = ?";
+    $stat = $db->prepare($sql);
+    $stat->execute([$_GET['edit']]);
+    $userToEdit = $stat->fetch(PDO::FETCH_ASSOC);
+}
+if(isset($_POST['update']))
+{
+    $sql = "UPDATE customer SET name = ?,email = ?,contect = ?,address = ?,gender = ? WHERE id = ?";
+    $db->prepare($sql)->execute([
+        $_POST['name'],
+        $_POST['email'],
+        $_POST['contect'],
+        $_POST['address'],
+        $_POST['gender'],
+        $_POST['id']
+    ]);
+    echo  '<script>alert("updated...")</script>';
+    header("Location:".$_SERVER['PHP_SELF']);
+    exit;
 
-$users = $db->query("SELECT*FROM customer ORDER BY id DESC")->fetchAll();
+}
+$users = $db->query("SELECT*FROM customer ORDER BY id ASC")->fetchAll();
 
 ?>
 
@@ -46,19 +77,21 @@ $users = $db->query("SELECT*FROM customer ORDER BY id DESC")->fetchAll();
     </style>
 </head>
 <body>
-    <h1 align="center">Insert Data</h1>
+    <h1 align="center"><?= $userToEdit ? 'edit user':'insert user'?></h1>
     <form action="" method="post">
-        <input type="hidden" name="id" value="">
-        name : <input type="text" name="name" value=""><br><br>
-        email: <input type="email" name="email" value=""><br><br>
-        contect : <input type="text" name="contect" value=""><br><br>
-        address : <input type="text" name="address" value=""><br><br>
+        <input type="hidden" name="id" value="<?= htmlspecialchars($userToEdit['id']) ?? ''?>">
+        name : <input type="text" name="name" value="<?= htmlspecialchars($userToEdit['name']) ?? ''?> "><br><br>
+        email: <input type="email" name="email" value="<?= htmlspecialchars($userToEdit['email'] )?? ''?>"><br><br>
+        contect : <input type="text" name="contect" value="<?= htmlspecialchars($userToEdit['contect']) ?? ''?>"><br><br>
+        address : <input type="text" name="address" value="<?= htmlspecialchars($userToEdit['address']) ?? ''?>"><br><br>
         Gender :
         <label for="">
-           <input type="radio" name="gender" value="male">Male
-           <input type="radio" name="gender" value="female">Female
+           <input type="radio" name="gender" value="male"
+           <?=(isset($userToEdit['gender'])&&$userToEdit['gender']=== 'male')?'checked':''?>>Male
+           <input type="radio" name="gender" value="female"
+           <?=(isset($userToEdit['gender'])&&$userToEdit['gender']=== 'female')?'checked':''?>>Female
         </label><br><br>
-        <input type="submit" value="save" name="save" id="button">
+        <input type="submit" value="<?= $userToEdit ? 'update':'save'?>" name="<?= $userToEdit ? 'update':'save'?>" id="button">
     </form>
     <h1 align="center">Details</h1>
     <table border="1" align="center">
@@ -71,7 +104,7 @@ $users = $db->query("SELECT*FROM customer ORDER BY id DESC")->fetchAll();
             <th>gender</th>
             <th>Action</th>
         </tr>
-        <?php foreach($users as $user);?>
+        <?php foreach($users as $user):?>
         <tr>
             <td><?= htmlspecialchars($user['id']) ?></td>
             <td><?= htmlspecialchars($user['name']) ?></td>
@@ -80,11 +113,11 @@ $users = $db->query("SELECT*FROM customer ORDER BY id DESC")->fetchAll();
             <td><?= htmlspecialchars($user['address']) ?></td>
             <td><?= htmlspecialchars($user['gender']) ?></td>
             <td>
-                <a href="">Delete</a>
-                <a href="">Update</a>
+                <a href="?delete=<?=$user['id']?>" onclick="return confirm('Do you want delete data??');">Delete</a>
+                <a href="?edit=<?=$user['id']?>">Edit</a>
             </td>
         </tr>
-        <?php //endforeach;?>
+        <?php endforeach;?>
     </table>
 </body>
 </html>
