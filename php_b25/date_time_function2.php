@@ -2,7 +2,7 @@
 
 $date = date("d");
 $month = date("m");
-$year = date("y");
+$year = date("Y");
 $workstart = mktime(10,0,0,$month,$date,$year);
 $workend = mktime(19,0,0,$month,$date,$year);
 $currenttime = time();
