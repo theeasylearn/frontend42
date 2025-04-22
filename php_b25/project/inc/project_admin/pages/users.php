@@ -1,11 +1,11 @@
 <?php
-    require_once("../include/header.php");
+require_once("../include/header.php");
 ?>
 <h1><i class="fas fa-users"></i>Users</h1>
 
 <div class="container">
     <div class="row">
-        <div class="col-xl-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
             <div class="card shadow-sm">
                 <div class="card-header bg-dark text-white">
                     Add User
@@ -15,15 +15,15 @@
                         <input type="hidden" name="id" value="">
                         <div class="mb-3">
                             <input type="text" name="uname" value=""
-                             placeholder="User Name" required>
+                                placeholder="User Name" required>
                         </div>
                         <div class="mb-3">
                             <input type="email" name="email" value=""
-                             placeholder="Email id" required>
+                                placeholder="Email id" required>
                         </div>
                         <div class="mb-3">
                             <input type="text" name="role" value=""
-                             placeholder="role user" required>
+                                placeholder="role user" required>
                         </div>
                         <button type="submit" class="btn btn-dark">Add</button>
                         <a href="categories.php" class="btn btn-secondary">Clear</a>
@@ -58,5 +58,5 @@
 </div>
 
 <?php
-    require_once("../include/footer.php");
+require_once("../include/footer.php");
 ?>

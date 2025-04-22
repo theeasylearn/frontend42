@@ -5,7 +5,7 @@ define("ISDEBUG", true);
 define("SERVER", "localhost:3308");
 define("USERNAME", "root");
 define("PASSWORD", "");
-define("DATABASE", "php25");
+define("DATABASE", "shop_db");
 function LogError($error)
 {
     $ErrorDateTime = date("D d-m-Y h:i:s A");
