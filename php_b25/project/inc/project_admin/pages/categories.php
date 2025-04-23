@@ -21,7 +21,7 @@
     $categoriesEdit = NULL;
     if(isset($_GET['edit']))
     {
-        $sql = "select * from categories";
+        $sql = "select * from categories where id = ?";
         $stamt = $db->prepare($sql);
         $stamt->execute([$_GET['edit']]);
         $categoriesEdit = $stamt->fetch(PDO::FETCH_ASSOC);
