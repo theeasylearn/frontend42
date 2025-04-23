@@ -39,60 +39,57 @@
     $categories = $db->query("SELECT * FROM categories ORDER BY id ASC")->fetchALL();
 
 ?>
-<h1><i class="fas fa-list"></i>Categories</h1>
+     <h1><i class="fas fa-list"></i> Categories</h1>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 mb-4">
-            <div class="card shadow-sm">
-                <div class="card-header bg-dark text-white">
-                    <?=$categoriesEdit?'Update':'Add'?> Categories
-                </div>
-                <div class="card-body">
-                    <form action="" method="post">
-                        <input type="hidden" name="id" value="<?=$categoriesEdit['id'] ??''?>">
-                        <div class="mb-3">
-                            <input type="text" name="name" value="<?=$categoriesEdit['name'] ??''?>"
-                             placeholder="Categories Name" required>
-                        </div>
-                        <input type="submit" class="btn btn-dark" name="<?=$categoriesEdit ?'update':'add'?>" 
-                        value="<?=$categoriesEdit ?'Update':'Add'?>">
-                        <a href="categories.php" class="btn btn-secondary">Clear</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-8 col-md-12">
-            <div class="card shadow-sm">
-                <div class="card-header bg-dark text-white">
-                    Categories List
-                </div>
-                <div class="card-body">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach($categories as $cat): ?>
-                            <tr>
-                                <td><?= htmlspecialchars($cat['id'])?></td>
-                                <td><?= htmlspecialchars($cat['name'])?></td>
-                                <td>
-                                    <a href="?edit=<?=$cat['id']?>" class="btn btn-warning">Edit</a>
-                                    <a href="?delete=<?=$cat['id']?>" class="btn btn-danger" onclick="return conforim('do you want to delete??')">Delete</a>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+<div class="row">
+  <!-- Form -->
+  <div class="col-lg-6 col-md-12 mb-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-dark text-white">
+        <?=$categoriesEdit ? 'Update' : 'Add'?> Category
+      </div>
+      <div class="card-body">
+        <form action="" method="post">
+          <input type="hidden" name="id" value="<?=$categoriesEdit['id'] ?? ''?>">
+          <div class="mb-3">
+            <input type="text" name="name" class="form-control" value="<?=$categoriesEdit['name'] ?? ''?>" placeholder="Category Name" required>
+          </div>
+          <input type="submit" class="btn btn-dark" name="<?=$categoriesEdit ? 'update' : 'add'?>" value="<?=$categoriesEdit ? 'Update' : 'Add'?>">
+          <a href="categories.php" class="btn btn-secondary">Clear</a>
+        </form>
+      </div>
     </div>
+  </div>
+
+  <!-- Category list -->
+  <div class="col-lg-6 col-md-12">
+    <div class="card shadow-sm">
+      <div class="card-header bg-dark text-white">Categories List</div>
+      <div class="card-body table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($categories as $cat): ?>
+            <tr>
+              <td><?= htmlspecialchars($cat['id']) ?></td>
+              <td><?= htmlspecialchars($cat['name']) ?></td>
+              <td>
+                <a href="?edit=<?=$cat['id']?>" class="btn btn-warning btn-sm">Edit</a>
+                <a href="?delete=<?=$cat['id']?>" class="btn btn-danger btn-sm" onclick="return confirm('Do you want to delete this category?')">Delete</a>
+              </td>
+            </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php

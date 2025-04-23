@@ -9,23 +9,20 @@
   <style>
     body {
       background-color: #f8f9fa;
-      margin: 0;
     }
 
-    /* Sidebar Styles */
     .sidebar {
       background-color: #343a40;
       min-height: 100vh;
       padding-top: 20px;
     }
 
-    .sidebar h2 {
+    .sidebar h2,
+    .sidebar a {
       color: white;
-      margin-bottom: 30px;
     }
 
     .sidebar a {
-      color: white;
       padding: 10px;
       display: block;
       text-decoration: none;
@@ -39,21 +36,20 @@
       background-color: #007bff;
     }
 
-    /* Ensure main content shifts correctly */
     @media (min-width: 992px) {
-      .main-content {
-        margin-left: 220px;
+      .sidebar.collapse {
+        display: block !important; /* Ensure sidebar stays open on large screens */
       }
     }
 
     .main-content {
-      padding: 10px;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
-<!-- Navbar for medium and small screens -->
+<!-- Navbar: Visible only on small/medium screens -->
 <nav class="navbar navbar-dark bg-dark d-lg-none">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">🌿 Admin Panel</a>
@@ -65,17 +61,15 @@
 
 <div class="container-fluid">
   <div class="row">
-    <!-- Sidebar: toggleable on md and sm, always visible on lg+ -->
-    <nav id="sidebarMenu" class="col-lg-2 col-md-2 collapse d-md-block sidebar">
-      <h2>🌿 Admin Panel</h2>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="col-lg-2 col-md-3 collapse sidebar">
+      <h2 class="px-3">🌿 Admin Panel</h2>
       <a class="nav-link" href="index.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
       <a class="nav-link" href="users.php"><i class="fas fa-users"></i> Users</a>
       <a class="nav-link" href="products.php"><i class="fas fa-box"></i> Products</a>
-      <a class="nav-link" href="categories.php"><i class="fas fa-list"></i> Categories</a>
+      <a class="nav-link active" href="categories.php"><i class="fas fa-list"></i> Categories</a>
       <a class="nav-link" href="orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
     </nav>
 
     <!-- Main content -->
-    <main class="col-lg-10 col-md-8 main-content">
-    
-    
+    <main class="col-lg-10 col-md-9 main-content">
