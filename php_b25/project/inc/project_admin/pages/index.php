@@ -1,5 +1,11 @@
 <?php
     require_once("../include/header.php");
+    require_once("../include/connection.php");
+
+    $userCount = $db->query("SELECT COUNT(*) FROM users")->fetchColumn();
+    $productCount = $db->query("SELECT COUNT(*) FROM products")->fetchColumn();
+    $categoriesCount = $db->query("SELECT COUNT(*) FROM categories")->fetchColumn();
+
 ?>
 <h1><i class="fas fa-tachometer-alt"></i>Dashboard</h1>
 
@@ -12,7 +18,7 @@
                 User
                 </div>
                 <div class="dashbord-body">
-                    50
+                    <?= $userCount ?>
                 </div>
             </div>
         </div>
@@ -25,7 +31,7 @@
                 Product
                 </div>
                 <div class="dashbord-body">
-                    30
+                    <?= $productCount  ?>
                 </div>
             </div>
         </div>
@@ -51,7 +57,7 @@
                 Categories
                 </div>
                 <div class="dashbord-body">
-                    100
+                    <?=$categoriesCount ?>
                 </div>
             </div>
         </div>
