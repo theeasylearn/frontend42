@@ -69,6 +69,7 @@
       <a class="nav-link" href="products.php"><i class="fas fa-box"></i> Products</a>
       <a class="nav-link active" href="categories.php"><i class="fas fa-list"></i> Categories</a>
       <a class="nav-link" href="orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
+      <a class="nav-link" href="gallery.php"><i class="fa-solid fa-images"></i> Gallery</a>
     </nav>
 
     <!-- Main content -->

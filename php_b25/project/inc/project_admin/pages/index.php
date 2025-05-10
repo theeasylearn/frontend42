@@ -62,6 +62,19 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-3 col-md-3">
+        <div class="card dashbord-card">
+            <div class="card-body">
+                <div class="dashbord-header">
+                <i class="fas fa-list"></i> 
+                Images
+                </div>
+                <div class="dashbord-body">
+                    <?=$categoriesCount ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php

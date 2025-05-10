@@ -11,20 +11,7 @@ require_once("../include/header.php");
                     User List
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Add your category rows here -->
-                        </tbody>
-                    </table>
+                   
                 </div>
             </div>
         </div>
