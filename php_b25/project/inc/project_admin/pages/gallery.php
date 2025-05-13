@@ -5,13 +5,12 @@ require_once("../include/connection.php");
 // Handle Delete
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    // Get image name to delete the file from folder
     $stmt = $db->prepare("SELECT image FROM gallery WHERE id = ?");
     $stmt->execute([$id]);
     $img = $stmt->fetch();
 
     if ($img && file_exists("../uploads/" . $img['image'])) {
-        unlink("../uploads/" . $img['image']); // Delete file from folder
+        unlink("../uploads/" . $img['image']);
     }
 
     // Delete record from DB
@@ -55,12 +54,12 @@ $gallery = $db->query("SELECT * FROM gallery ORDER BY id ASC");
                     Add Image
                 </div>
                 <div class="card-body">
-                    <form action="" method="post" enctype="multipart/form-data"> <!-- ✅ Correct enctype -->
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <input type="text" class="form-control" name="title" placeholder="Image Title" required>
                         </div>
                         <div class="mb-3">
-                            <input type="file" class="form-control" name="images" required> <!-- ✅ name="images" -->
+                            <input type="file" class="form-control" name="images" required> 
                         </div>
                         <input type="submit" class="btn btn-dark" name="add" value="Add">
                         <a href="<?= $_SERVER['PHP_SELF'] ?>" class="btn btn-secondary">Clear</a>
