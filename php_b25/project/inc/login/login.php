@@ -1,3 +1,35 @@
+<?php
+session_start();
+require_once "connection.php";
+if(isset($_POST['login']))
+{
+    $email = trim($_POST['email']);
+    $pwd = $_POST['password'];
+
+    
+    $sql =$db->prepare("SELECT * FROM login WHERE email=?");
+    $sql->execute([$email]);
+    $login = $sql->fetch();
+
+    if($login && password_verify($pwd,$login['password']))
+    {
+        $_SESSION['login']=[
+            'id'=>$login['id'],
+            'name'=>$login['name'],
+            'email'=>$login['email']
+        ];
+        header("Location: dashboard.php");
+        exit;
+    }
+    else
+    {
+        $_SESSION['error'] = "Invalid login credentials.";
+    }
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +116,7 @@
                 </form>
                 <div class="form-text">
                     <a href="forgot.php">Forgot Password?</a> | 
-                    <a href="register.php">Create Account</a>
+                    <a href="registration.php">Create Account</a>
                 </div>
             </div>
         </div>
