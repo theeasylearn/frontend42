@@ -59,13 +59,14 @@ body
 #one:hover 
 {
     animation-duration: 1000ms;
-    animation-name: anime-one; /* we have to define anime-one */
+    animation-name: anime-one 1000ms forwards ; /* we have to define anime-one */
 }
 #two:hover 
 {
     animation-duration: 1500ms;
     animation-fill-mode: forwards; /* Keeps the final state of the animation */
     animation-name: anime-two; /* we have to define anime-one */
+
 }
 @keyframes anime-two {
     50%

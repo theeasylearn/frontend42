@@ -1,0 +1,5 @@
+✅ Cookie Set: language = gujarti at 2025-05-17 14:05:13
+✅ Cookie Set: language = gujarti at 2025-05-17 14:05:34
+✅ Cookie Set: database = MYSQL at 2025-05-17 14:06:50
+✅ Cookie Set: name = ayushi at 2025-05-17 14:07:09
+🗑️ Cookie Deleted: database at 2025-05-17 14:07:32
