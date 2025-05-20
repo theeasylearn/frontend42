@@ -170,11 +170,11 @@
                         </form>
                      </div>
                     <ul class="navbar-nav align-items-center">
-                              <a class="nav-link toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                              <a class="nav-link toggle" href="index.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                            
                            </li>
                            <li class="nav-item dropdown w-100 w-lg-auto">
-                              <a class="nav-link toggle" href="aboutus.php" role="button">About us</a>
+                              <a class="nav-link toggle" href="about_us.php" role="button">About us</a>
                              
                            </li><!--
                            <li class="nav-item w-100 w-lg-auto">
