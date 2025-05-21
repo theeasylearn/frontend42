@@ -184,14 +184,14 @@
                               <a class="nav-link toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mega menu</a>
                            </li>-->
                            <li class="nav-item dropdown w-100 w-lg-auto">
-                              <a class="nav-link toggle" href="contectus.php" role="button" >Contect</a>
+                              <a class="nav-link toggle" href="contect_us.php" role="button" >Contect</a>
                            </li>
                            <li class="nav-item dropdown w-100 w-lg-auto">
                               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                               <ul class="dropdown-menu">
                                  <li><a class="dropdown-item" href="signin.php">Signin</a></li>
                                  <li><a class="dropdown-item" href="signup.php">Signup</a></li>
-                                 <li><a class="dropdown-item" href="forgot.php">Forgot Password</a></li>
+                                 <li><a class="dropdown-item" href="forgot_password.php">Forgot Password</a></li>
                                  <li class="dropdown-submenu dropend">
                                     <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">My Account</a>
                                     <ul class="dropdown-menu">

@@ -9,15 +9,15 @@
       <meta content="Codescandy" name="author" />
       <title>Forget Password eCommerce HTML Template - FreshCart</title>
       <!-- Favicon icon-->
-      <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico" />
 
       <!-- Libs CSS -->
-      <link href="assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-      <link href="assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
-      <link href="assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+      <link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+      <link href="../assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
+      <link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
 
       <!-- Theme CSS -->
-      <link rel="stylesheet" href="assets/css/theme.min.css" />
+      <link rel="stylesheet" href="../assets/css/theme.min.css" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
@@ -50,7 +50,7 @@
          <nav class="navbar navbar-light py-2">
             <div class="container justify-content-center justify-content-lg-between">
                <a class="navbar-brand" href="../index.html">
-                    <img src="assets/images/logo/logo1.png" height="80px" width="100px" alt="" class="d-inline-block align-text-top" />
+                    <img src="../assets/images/logo/logo1.png" height="80px" width="100px" alt="" class="d-inline-block align-text-top" />
                </a>
                <span class="navbar-text">
                   Already have an account?
@@ -69,7 +69,7 @@
                <div class="row justify-content-center align-items-center">
                   <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
                      <!-- img -->
-                     <img src="assets/images/svg-graphics/forgot-password.png" alt="" class="img-fluid" />
+                     <img src="../assets/images/svg-graphics/forgot-password.png" alt="" class="img-fluid" />
                   </div>
                   <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1 d-flex align-items-center">
                      <div>
