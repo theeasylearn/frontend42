@@ -1,3 +1,38 @@
+
+<?php
+    session_start();
+    require_once "../include/connection.php";
+    if(isset($_POST['submit']))
+    {
+        $name = trim($_POST['name']);
+        $email =trim($_POST['email']);
+        $pwd = password_hash($_POST['password'],PASSWORD_BCRYPT);
+
+        $sql =$db->prepare("SELECT id FROM login WHERE email=?");
+        $sql->execute([$email]);
+
+        if($sql->rowCount()>0)
+        {
+            $_SESSION['error'] = "This Email is already login";
+        }
+        else
+        {
+            $sql = $db->prepare("INSERT INTO login (name,email,password)VALUE(?,?,?)");
+            if($sql->execute([
+                $name,
+                $email,
+                $pwd
+            ])){
+                $_SESSION['success'] = "Hurrr!! your registate successfully";
+                header("Location: signin.php");
+                exit;
+            }
+        }
+
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,6 +109,12 @@
                      <h1 class="mb-1 h2 fw-bold">Get Start Shopping</h1>
                      <p>Welcome to FreshCart! Enter your email to get started.</p>
                   </div>
+                  <?php if (!empty($_SESSION['error'])): ?>
+                    <div class="alert alert-danger"><?= $_SESSION['error']; unset($_SESSION['error']); ?></div>
+                <?php endif; ?>
+                <?php if (!empty($_SESSION['success'])): ?>
+                    <div class="alert alert-success"><?= $_SESSION['success']; unset($_SESSION['success']); ?></div>
+                <?php endif; ?>
 
                   <!-- form -->
                   <form class="needs-validation" method="post">

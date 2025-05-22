@@ -1,28 +1,38 @@
 <?php
     session_start();
     require_once "../include/connection.php";
-
-    if(isset($_POST['submit']))
+    if(!isset($_SESSION['otp_verify'])||
+    !isset($_SESSION['otp_email'])||!$_SESSION['otp_verify'])
     {
-    $email = ($_POST['email']);
-
-    $sql =$db->prepare("SELECT * FROM login WHERE email=?");
-    $sql->execute([$email]);
-    if($sql->rowCount()>0)
-    {
-        $_SESSION['otp_email']=$email;
-        $_SESSION['otp']=rand(100000,999999);
-        echo "<div class='alert alert-success text-center'>
-        OTP: <strong>{$_SESSION['otp']}</strong><br>
-        <a href='verify.php' class='btn btn-primary mt-3'>Click here to verify OTP</a>
+        echo "<div style='text-align:center;margin-top:50px;'>
+        <h4>Unauthorized access</h4>
+        <p><a href='forgot.php'>Start again</a></p>
       </div>";
-exit;
+       exit;
     }
-    else{
-        echo "<div class='alert alert-danger text-center'>Email not found!</div>";
+    if(isset($_POST['reset_pass']))
+    {
+        $newpwd = trim($_POST['new_password']);
+        if(strlen($newpwd)<6)
+        {
+            $error = "Password must be at least 6 characters.";
+        }
+        else
+        {
+            $hash = password_hash($newpwd,PASSWORD_DEFAULT);
+
+            $sql =$db->prepare("UPDATE login SET password = ? WHERE email=?");
+            $sql->execute([$hash,$_SESSION['otp_email']]);
+
+            session_unset();
+            $success = "Password reset successful!";
+            header("refresh:2;url=login.php");
+
+        }
     }
-}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
    
@@ -110,15 +120,14 @@ exit;
                               <!-- col -->
                               <div class="col-12">
                                  <!-- input -->
-                                 <label for="formForgetEmail" class="form-label visually-hidden">Email address</label>
-                                 <input type="email" class="form-control" id="formForgetEmail" placeholder="Email" required name="email"/>
+                                 <label for="formForgetEmail" class="form-label visually-hidden">password</label>
+                                 <input type="password" class="form-control" id="formForgetEmail" placeholder="*******" required name="password" />
                                  <div class="invalid-feedback">Please enter correct password.</div>
                               </div>
 
                               <!-- btn -->
                               <div class="col-12 d-grid gap-2">
-                                 <button type="submit" class="btn btn-info">Reset Password</button>
-                                 <a href="signup.php" class="btn btn-light">Back</a>
+                                 <a href="index.php" class="btn btn-light">Back</a>
                               </div>
                            </div>
                         </form>
