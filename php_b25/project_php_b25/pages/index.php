@@ -6,7 +6,11 @@ require_once "../include/connection.php";
 
 if(isset($_POST['b1']))
 {
-   $_SESSION['pname'];
+   $_SESSION['name'] = $_POST['name'];
+   $_SESSION['price'] = $_POST['price'];
+   $_SESSION['stock'] = $_POST['stock'];
+   echo "<script>window.location = 'checkout.php';</script>";
+   exit;
 }
 ?>
 <main>
@@ -40,55 +44,45 @@ if(isset($_POST['b1']))
 
     <!-- Popular Products Section -->
     <section class="my-lg-14 my-8">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mb-6">
-                <h3 class="mb-0">Popular Products</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-6">
+                    <h3 class="mb-0">Popular Products</h3>
+                </div>
             </div>
-        </div>
-        <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
-            <?php
-            // Fetch all products from the database
-            $sql = $db->prepare("SELECT * FROM products");
-            $sql->execute();
-            $products = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-            // Check if products exist
-            if ($products) {
-                foreach ($products as $pro) {
-            ?>
-                <div class="col">
-                    <div class="card card-product">
-                        <div class="card-body">
-                            <h2 class="fs-6"><a href="pages/shop-single.html" class="text-inherit text-decoration-none"><?= htmlspecialchars($pro['pname']) ?></a></h2>
-                            <div>
-                                <span class="text-dark">Rs.<?= htmlspecialchars($pro['price']) ?></span>
-                            </div>
-                            <div>
-                            <label class="text-muted">Stock:
+            <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
+                <?php
+                $product = $db->query("SELECT * FROM products ORDER BY id ASC");
+                foreach ($product as $pro): ?>
+                    <div class="col">
+                        <div class="card card-product">
+                            <div class="card-body">
+                                <h2 class="fs-6">
+                                    <a href="#" class="text-inherit text-decoration-none">
+                                        <?= htmlspecialchars($pro['pname']) ?>
+                                    </a>
+                                </h2>
+                                <form action="" method="post">
+                                    <div>
+                                        <span class="text-dark">₹<?= htmlspecialchars($pro['price']) ?></span><br>
+                                        <label class="text-muted">Stock:
                                             <input type="number" name="stock" min="1" value="1" required>
                                         </label>
-                                    
+                                    </div><br>
                                     <input type="hidden" name="name" value="<?= htmlspecialchars($pro['pname']) ?>">
                                     <input type="hidden" name="price" value="<?= htmlspecialchars($pro['price']) ?>">
-                            </div><br>
-                            <div>
-                                <a href="buynow.php?id=<?= htmlspecialchars($pro['id']) ?>" name="b1" class="btn btn-info btn-sm">Buy Now</a>
-                                <a href="#!" class="btn btn-info btn-sm">Add to cart</a>
+                                    <div>
+                                        <input type="submit" value="Buy Now" name="b1" class="btn btn-info">
+                                        <input type="submit" value="Add To Cart" name="cart" class="btn btn-outline-secondary">
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php
-                }
-            } else {
-                echo '<div class="col-12"><p>No products found.</p></div>';
-            }
-            ?>
+                <?php endforeach; ?>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
     <!-- Features Section -->
     <section class="my-lg-14 my-8">
         <div class="container">

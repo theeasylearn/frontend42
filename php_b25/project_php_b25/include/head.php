@@ -93,21 +93,99 @@ if ($userId) {
                                     <a href="signin.php" class="text-muted">Sign In</a>
                                 <?php endif; ?>
                             </div>
-                            <div class="list-inline-item me-5 me-lg-0">
-                                <a class="text-muted position-relative" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
-                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                                    </svg>
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                                        <span class="visually-hidden">unread messages</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="list-inline-item d-inline-block d-lg-none">
-                                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-label="Toggle navigation"></button>
-                            </div>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Shopping Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Cart items go here -->
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 id="offcanvasRightLabel" class="mb-0 fs-4">Shopping Cart</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="alert alert-success p-2" role="alert">
+      🎉 You've got FREE delivery. <a href="#" class="alert-link">Checkout now!</a>
+    </div>
+
+    <!-- Item 1 -->
+    <div class="row align-items-center mb-4">
+      <div class="col-6 col-md-6 col-lg-7">
+        <div class="d-flex">
+          <img src="assets/images/products/sample1.jpg" alt="Product 1" class="icon-shape icon-xxl" />
+          <div class="ms-3">
+            <h6 class="mb-0">Organic Apples</h6>
+            <small class="text-muted">₹150 / unit</small>
+            <div class="mt-2 small lh-1">
+              <a href="#" class="text-decoration-none text-danger">
+                <i class="feather-trash-2"></i> Remove
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-md-3 col-lg-3">
+        <div class="input-group input-spinner">
+          <input type="button" value="-" class="button-minus btn btn-sm btn-outline-secondary" />
+          <input type="number" value="2" min="1" class="form-control form-control-sm text-center" />
+          <input type="button" value="+" class="button-plus btn btn-sm btn-outline-secondary" />
+        </div>
+      </div>
+      <div class="col-2 text-end">
+        <span class="fw-bold">₹300</span>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="row align-items-center mb-4">
+      <div class="col-6 col-md-6 col-lg-7">
+        <div class="d-flex">
+          <img src="assets/images/products/sample2.jpg" alt="Product 2" class="icon-shape icon-xxl" />
+          <div class="ms-3">
+            <h6 class="mb-0">Fresh Bananas</h6>
+            <small class="text-muted">₹60 / unit</small>
+            <div class="mt-2 small lh-1">
+              <a href="#" class="text-decoration-none text-danger">
+                <i class="feather-trash-2"></i> Remove
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-md-3 col-lg-3">
+        <div class="input-group input-spinner">
+          <input type="button" value="-" class="button-minus btn btn-sm btn-outline-secondary" />
+          <input type="number" value="3" min="1" class="form-control form-control-sm text-center" />
+          <input type="button" value="+" class="button-plus btn btn-sm btn-outline-secondary" />
+        </div>
+      </div>
+      <div class="col-2 text-end">
+        <span class="fw-bold">₹180</span>
+      </div>
+    </div>
+
+    <!-- Total -->
+    <div class="border-top pt-4 mt-4">
+      <div class="d-flex justify-content-between mb-2">
+        <span>Subtotal</span>
+        <span>₹480</span>
+      </div>
+      <div class="d-flex justify-content-between mb-4">
+        <span>Shipping</span>
+        <span class="text-success">Free</span>
+      </div>
+      <div class="d-grid">
+        <a href="checkout_cart.php" class="btn btn-primary">Proceed to Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
                         </div>
                     </div>
                 </div>
@@ -149,3 +227,4 @@ if ($userId) {
             </div>
         </nav>
     </div>
+   
