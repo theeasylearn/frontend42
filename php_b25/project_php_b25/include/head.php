@@ -31,6 +31,7 @@ if ($userId) {
     <link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/theme.min.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -93,104 +94,73 @@ if ($userId) {
                                     <a href="signin.php" class="text-muted">Sign In</a>
                                 <?php endif; ?>
                             </div>
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 id="offcanvasRightLabel">Shopping Cart</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <!-- Cart items go here -->
-  </div>
+                      <!-- Cart Icon Trigger -->
+<div class="list-inline-item me-5 me-lg-0">
+   <a class="text-muted position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
+         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+         <line x1="3" y1="6" x2="21" y2="6"></line>
+         <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+ <!-- ✅ Cart Icon Trigger -->
+<div class="list-inline-item m-4">
+   <a class="text-muted position-relative"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      role="button"
+      aria-controls="offcanvasRight">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="feather feather-shopping-bag">
+         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+         <line x1="3" y1="6" x2="21" y2="6"/>
+         <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+         1
+         <span class="visually-hidden">items in cart</span>
+      </span>
+   </a>
 </div>
 
+<!-- ✅ Offcanvas Cart -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header border-bottom">
-    <h5 id="offcanvasRightLabel" class="mb-0 fs-4">Shopping Cart</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="alert alert-success p-2" role="alert">
-      🎉 You've got FREE delivery. <a href="#" class="alert-link">Checkout now!</a>
-    </div>
+   <div class="offcanvas-header border-bottom">
+      <h5 id="offcanvasRightLabel" class="mb-0 fs-4">Shop Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+   <div class="offcanvas-body">
+      <div class="alert alert-danger p-2" role="alert">
+         You’ve got FREE delivery. Start
+         <a href="#!" class="alert-link">checkout now!</a>
+      </div>
 
-    <!-- Item 1 -->
-    <div class="row align-items-center mb-4">
-      <div class="col-6 col-md-6 col-lg-7">
-        <div class="d-flex">
-          <img src="assets/images/products/sample1.jpg" alt="Product 1" class="icon-shape icon-xxl" />
-          <div class="ms-3">
-            <h6 class="mb-0">Organic Apples</h6>
-            <small class="text-muted">₹150 / unit</small>
-            <div class="mt-2 small lh-1">
-              <a href="#" class="text-decoration-none text-danger">
-                <i class="feather-trash-2"></i> Remove
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4 col-md-3 col-lg-3">
-        <div class="input-group input-spinner">
-          <input type="button" value="-" class="button-minus btn btn-sm btn-outline-secondary" />
-          <input type="number" value="2" min="1" class="form-control form-control-sm text-center" />
-          <input type="button" value="+" class="button-plus btn btn-sm btn-outline-secondary" />
-        </div>
-      </div>
-      <div class="col-2 text-end">
-        <span class="fw-bold">₹300</span>
-      </div>
-    </div>
+      <!-- Sample Cart Items -->
+      <ul class="list-group mb-3">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+            Product 1
+            <span class="badge bg-primary rounded-pill">$10.00</span>
+         </li>
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+            Product 2
+            <span class="badge bg-primary rounded-pill">$15.00</span>
+         </li>
+      </ul>
 
-    <!-- Item 2 -->
-    <div class="row align-items-center mb-4">
-      <div class="col-6 col-md-6 col-lg-7">
-        <div class="d-flex">
-          <img src="assets/images/products/sample2.jpg" alt="Product 2" class="icon-shape icon-xxl" />
-          <div class="ms-3">
-            <h6 class="mb-0">Fresh Bananas</h6>
-            <small class="text-muted">₹60 / unit</small>
-            <div class="mt-2 small lh-1">
-              <a href="#" class="text-decoration-none text-danger">
-                <i class="feather-trash-2"></i> Remove
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="d-flex justify-content-between mt-4">
+         <a href="#!" class="btn btn-primary">Continue Shopping</a>
+         <a href="#!" class="btn btn-dark">Update Cart</a>
       </div>
-      <div class="col-4 col-md-3 col-lg-3">
-        <div class="input-group input-spinner">
-          <input type="button" value="-" class="button-minus btn btn-sm btn-outline-secondary" />
-          <input type="number" value="3" min="1" class="form-control form-control-sm text-center" />
-          <input type="button" value="+" class="button-plus btn btn-sm btn-outline-secondary" />
-        </div>
-      </div>
-      <div class="col-2 text-end">
-        <span class="fw-bold">₹180</span>
-      </div>
-    </div>
-
-    <!-- Total -->
-    <div class="border-top pt-4 mt-4">
-      <div class="d-flex justify-content-between mb-2">
-        <span>Subtotal</span>
-        <span>₹480</span>
-      </div>
-      <div class="d-flex justify-content-between mb-4">
-        <span>Shipping</span>
-        <span class="text-success">Free</span>
-      </div>
-      <div class="d-grid">
-        <a href="checkout_cart.php" class="btn btn-primary">Proceed to Checkout</a>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
-
-                        </div>
+                     
+                            
                     </div>
                 </div>
             </div>
         </div>
+     
         <nav class="navbar navbar-expand-lg navbar-light navbar-default py-0 pb-lg-4" aria-label="Offcanvas navbar large">
             <div class="container">
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-default" aria-labelledby="navbar-defaultLabel">
@@ -227,4 +197,9 @@ if ($userId) {
             </div>
         </nav>
     </div>
+
+      <script src="/assets/js/vendors/validation.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
    
