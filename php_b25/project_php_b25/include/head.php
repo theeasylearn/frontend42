@@ -95,14 +95,7 @@ if ($userId) {
                                 <?php endif; ?>
                             </div>
                       <!-- Cart Icon Trigger -->
-<div class="list-inline-item me-5 me-lg-0">
-   <a class="text-muted position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
-         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-         <line x1="3" y1="6" x2="21" y2="6"></line>
-         <path d="M16 10a4 4 0 0 1-8 0"></path>
-      </svg>
+
  <!-- ✅ Cart Icon Trigger -->
 <div class="list-inline-item m-4">
    <a class="text-muted position-relative"
@@ -125,6 +118,7 @@ if ($userId) {
 </div>
 
 <!-- ✅ Offcanvas Cart -->
+
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
    <div class="offcanvas-header border-bottom">
       <h5 id="offcanvasRightLabel" class="mb-0 fs-4">Shop Cart</h5>
@@ -135,19 +129,28 @@ if ($userId) {
          You’ve got FREE delivery. Start
          <a href="#!" class="alert-link">checkout now!</a>
       </div>
+      <?php
+
+        if($userId)
+        {
+            $sql = $db->prepare("SELECT * FROM cart WHERE uid = ?");
+            $sql->execute([$userId]);
+            $cart = $sql->fetchAll();
+            if($cart)
+            {
+                foreach($cart as $c) : ?>
+            
+       
 
       <!-- Sample Cart Items -->
       <ul class="list-group mb-3">
          <li class="list-group-item d-flex justify-content-between align-items-center">
-            Product 1
-            <span class="badge bg-primary rounded-pill">$10.00</span>
-         </li>
-         <li class="list-group-item d-flex justify-content-between align-items-center">
-            Product 2
-            <span class="badge bg-primary rounded-pill">$15.00</span>
+           <?=htmlspecialchars($c['pname']) ?>
+            <span class="badge bg-primary rounded-pill"> <?=htmlspecialchars($c['tprice']) ?> </span>
+            <span class="badge bg-primary rounded-pill"> <?=htmlspecialchars($c['stock']) ?> </span>
          </li>
       </ul>
-
+       <?php endforeach; } }  ?>
       <div class="d-flex justify-content-between mt-4">
          <a href="#!" class="btn btn-primary">Continue Shopping</a>
          <a href="#!" class="btn btn-dark">Update Cart</a>

@@ -3,14 +3,16 @@ session_start();
 require_once "../include/head.php";
 require_once "../include/connection.php";
 
+// Simulate login (for demo purposes)
+$userId = $_SESSION['user_id'] ?? null;
 
-if(isset($_POST['b1']))
-{
-   $_SESSION['name'] = $_POST['name'];
-   $_SESSION['price'] = $_POST['price'];
-   $_SESSION['stock'] = $_POST['stock'];
-   echo "<script>window.location = 'checkout.php';</script>";
-   exit;
+// Handle Buy Now
+if (isset($_POST['b1'])) {
+    $_SESSION['name'] = $_POST['name'];
+    $_SESSION['price'] = $_POST['price'];
+    $_SESSION['stock'] = $_POST['stock'];
+    echo "<script>window.location = 'checkout.php';</script>";
+    exit;
 }
 ?>
 <main>
@@ -24,18 +26,16 @@ if(isset($_POST['b1']))
                         <span class="badge text-bg-warning">Opening Sale Discount 50%</span>
                         <h2 class="text-dark display-5 fw-bold mt-4">SuperMarket For Fresh Grocery</h2>
                         <p class="lead">Introduced a new model for online grocery shopping and convenient home delivery.</p>
-                        <a href="#!" class="btn btn-info mt-3">Shop Now <i class="feather-icon icon-arrow-right ms-1"></i></a>
+                        <a href="#!" class="btn btn-info mt-3">Shop Now</a>
                     </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="slider-item" style="background: url(../assets/images/slider/slider-2.jpg) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center;">
                     <div class="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-14 px-8 text-xs-center">
                         <span class="badge text-bg-warning">Free Shipping - orders over $100</span>
-                        <h2 class="text-dark display-5 fw-bold mt-4">
-                            Free Shipping on <br /> orders over <span class="text-info">$100</span>
-                        </h2>
+                        <h2 class="text-dark display-5 fw-bold mt-4">Free Shipping on <br /> orders over <span class="text-info">$100</span></h2>
                         <p class="lead">Free Shipping to First-Time Customers Only, After promotions and discounts are applied.</p>
-                        <a href="#!" class="btn btn-info mt-3">Shop Now <i class="feather-icon icon-arrow-right ms-1"></i></a>
+                        <a href="#!" class="btn btn-info mt-3">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ if(isset($_POST['b1']))
                                         <?= htmlspecialchars($pro['pname']) ?>
                                     </a>
                                 </h2>
-                                <form action="" method="post">
+                                <form class="add-to-cart-form" method="post">
                                     <div>
                                         <span class="text-dark">₹<?= htmlspecialchars($pro['price']) ?></span><br>
                                         <label class="text-muted">Stock:
@@ -73,7 +73,7 @@ if(isset($_POST['b1']))
                                     <input type="hidden" name="price" value="<?= htmlspecialchars($pro['price']) ?>">
                                     <div>
                                         <input type="submit" value="Buy Now" name="b1" class="btn btn-info">
-                                        <input type="submit" value="Add To Cart" name="cart" class="btn btn-outline-secondary">
+                                        <button type="button" class="btn btn-outline-secondary add-to-cart-btn">Add To Cart</button>
                                     </div>
                                 </form>
                             </div>
@@ -83,6 +83,7 @@ if(isset($_POST['b1']))
             </div>
         </div>
     </section>
+
     <!-- Features Section -->
     <section class="my-lg-14 my-8">
         <div class="container">
@@ -137,6 +138,26 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1
+    });
+
+    // AJAX for Add to Cart
+    $('.add-to-cart-btn').click(function(e) {
+        e.preventDefault();
+        const $form = $(this).closest('form');
+        const formData = $form.serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: 'add-to-cart.php',
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+                alert(response.message);
+            },
+            error: function() {
+                alert('An error occurred while adding to cart.');
+            }
+        });
     });
 });
 </script>
