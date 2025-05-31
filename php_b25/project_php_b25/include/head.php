@@ -152,7 +152,7 @@ if ($userId) {
       </ul>
        <?php endforeach; } }  ?>
       <div class="d-flex justify-content-between mt-4">
-         <a href="#!" class="btn btn-primary">Continue Shopping</a>
+         <a href="checkout_cart.php" class="btn btn-primary">Continue Shopping</a>
          <a href="#!" class="btn btn-dark">Update Cart</a>
       </div>
    </div>
@@ -185,7 +185,7 @@ if ($userId) {
                         <ul class="navbar-nav align-items-center">
                             <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="aboutus.php">About us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contectus.php">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contect_us.php">Contact</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                                 <ul class="dropdown-menu">
