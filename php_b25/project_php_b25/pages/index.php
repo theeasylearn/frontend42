@@ -4,7 +4,7 @@ require_once "../include/head.php";
 require_once "../include/connection.php";
 
 // Simulate login (for demo purposes)
-$userId = $_SESSION['user_id'] ?? null;
+$userId = $_SESSION['login']['id'];
 
 // Handle Buy Now
 if (isset($_POST['b1'])) {
@@ -13,6 +13,22 @@ if (isset($_POST['b1'])) {
     $_SESSION['stock'] = $_POST['stock'];
     echo "<script>window.location = 'checkout.php';</script>";
     exit;
+}
+if (isset($_POST['cart'])) {
+    if ($userId === null) {
+        echo "<script>alert('You must be logged in to add to cart.');</script>";
+    } else {
+        $uid = $userId;
+        $name = $_POST['name'];
+        $price = $_POST['price'];
+        $stock = $_POST['stock'];
+        $tprice = $stock * $price;
+
+        $stmt = $db->prepare("INSERT INTO cart (uid, pname, stock, tprice) VALUES (?, ?, ?, ?)");
+        $stmt->execute([$userId, $name, $stock, $tprice]);
+
+        echo "<script>alert('Product added to cart successfully!');</script>";
+    }
 }
 ?>
 <main>
@@ -72,8 +88,8 @@ if (isset($_POST['b1'])) {
                                     <input type="hidden" name="name" value="<?= htmlspecialchars($pro['pname']) ?>">
                                     <input type="hidden" name="price" value="<?= htmlspecialchars($pro['price']) ?>">
                                     <div>
-                                        <input type="submit" value="Buy Now" name="b1" class="btn btn-info">
-                                        <button type="button" class="btn btn-outline-secondary add-to-cart-btn">Add To Cart</button>
+                                    <input type="submit" value="Buy Now" name="b1" class="btn btn-info">
+                                    <input type="submit" value="Add To Cart" name="cart" class="btn btn-outline-secondary">
                                     </div>
                                 </form>
                             </div>

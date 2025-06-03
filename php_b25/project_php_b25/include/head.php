@@ -14,6 +14,12 @@ if ($userId) {
         error_log("Database error: " . $e->getMessage());
     }
 }
+
+if(isset($_POST['delete'])) {
+    $db->prepare("DELETE FROM cart WHERE id = ?")->execute([$_POST['id']]);
+    echo "<script>window.location = 'index.php';</script>";
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -148,6 +154,31 @@ if ($userId) {
            <?=htmlspecialchars($c['pname']) ?>
             <span class="badge bg-primary rounded-pill"> <?=htmlspecialchars($c['tprice']) ?> </span>
             <span class="badge bg-primary rounded-pill"> <?=htmlspecialchars($c['stock']) ?> </span>
+            <div class="mt-2 small lh-1">
+    <form method="post" onsubmit="return confirm('Are you sure you want to remove this item?');" style="display:inline;">
+        <input type="hidden" name="id" value="<?= $c['id'] ?>">
+        <button type="submit" name="delete" class="btn btn-sm btn-link text-danger p-0 text-decoration-none">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-trash-2">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                <line x1="10" y1="11" x2="10" y2="17"></line>
+                <line x1="14" y1="11" x2="14" y2="17"></line>
+            </svg>
+            <span class="text-muted">Remove</span>
+        </button>
+    </form>
+</div>
+
          </li>
       </ul>
        <?php endforeach; } }  ?>
@@ -184,7 +215,7 @@ if ($userId) {
                         </div>
                         <ul class="navbar-nav align-items-center">
                             <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="aboutus.php">About us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about_us.php">About us</a></li>
                             <li class="nav-item"><a class="nav-link" href="contect_us.php">Contact</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>

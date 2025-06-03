@@ -50,8 +50,9 @@ if(isset($_POST['b1']))
         $stock,
         $total
     ]);
-
+    $db->prepare("DELETE FROM cart WHERE uid = ?")->execute([$userId]);
     echo "<script>window.location = 'index.php';</script>";
+    
    exit;
 }
 ?>
