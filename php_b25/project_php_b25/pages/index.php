@@ -57,7 +57,36 @@ if (isset($_POST['cart'])) {
             </div>
         </div>
     </section>
+    <section class="my-lg-14 my-8">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="mb-6">
+                        <!-- heading    -->
+                        <h3 class="mb-0">Shop Popular Categories</h3>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <!-- col -->
+                     <?php 
+                      $product = $db->query("SELECT * FROM categories ORDER BY id ASC");
+                      foreach ($product as $pro): ?>
+                     <div class="col-lg-2 col-md-4 col-6">
+                        <div class="text-center mb-10">
+                           <!-- img -->
+                           <a href="#"><img src="../assets/images/category/dairy-bread-eggs.png" alt="" class="card-image rounded-circle" /></a>
+                           <!-- text -->
+                           <div class="mt-4">
+                              <h5 class="fs-6 mb-0"><a href="shop-grid.html" class="text-inherit"><?= htmlspecialchars($pro['name']) ?></a></h5>
+                           </div>
+                        </div>
+                     </div>
+                     <?php endforeach; ?>
 
+                  </div>
+               </div>
+            </div>
+         </section>
     <!-- Popular Products Section -->
     <section class="my-lg-14 my-8">
         <div class="container">
